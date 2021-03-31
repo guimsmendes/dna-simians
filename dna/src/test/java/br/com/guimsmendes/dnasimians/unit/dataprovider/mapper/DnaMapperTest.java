@@ -1,5 +1,7 @@
-package br.com.guimsmendes.dnasimians.dataprovider.mapper;
+package br.com.guimsmendes.dnasimians.unit.dataprovider.mapper;
 
+import br.com.guimsmendes.dnasimians.dataprovider.mapper.DnaMapper;
+import br.com.guimsmendes.dnasimians.dataprovider.mapper.DnaMapperImpl;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
@@ -13,7 +15,6 @@ import static org.junit.jupiter.api.Assertions.*;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.UUID;
 
 import org.junit.jupiter.api.BeforeEach;
 

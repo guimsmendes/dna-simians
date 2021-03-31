@@ -1,8 +1,11 @@
-package br.com.guimsmendes.dnasimians.dataprovider.repository;
+package br.com.guimsmendes.dnasimians.unit.dataprovider.repository;
 
 import br.com.guimsmendes.dnasimians.dataprovider.exception.DataProviderException;
 import br.com.guimsmendes.dnasimians.dataprovider.model.DnaEntity;
+import br.com.guimsmendes.dnasimians.dataprovider.repository.DnaRepository;
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -19,9 +22,18 @@ class DnaRepositoryTest {
     @Autowired
     private DnaRepository dnaRepository;
 
+    @BeforeEach
+    public void beforeEach(){
+        dnaRepository.delete();
+    }
+
+    @AfterEach
+    public void afterEach(){
+        dnaRepository.delete();
+    }
+
     @Test
     void postDnaSequenceTest(){
-        dnaRepository.delete();
         String dnaId = UUID.randomUUID().toString();
         Object response = dnaRepository.postDnaSequence(mockDnaEntityHuman(dnaId));
         assertEquals(dnaId,response.toString());
@@ -35,7 +47,6 @@ class DnaRepositoryTest {
 
     @Test
     void getStatsTest() {
-        dnaRepository.delete();
         String dnaIdSimian = UUID.randomUUID().toString();
         dnaRepository.postDnaSequence(mockDnaEntitySimian(dnaIdSimian));
         String dnaIdHuman = UUID.randomUUID().toString();

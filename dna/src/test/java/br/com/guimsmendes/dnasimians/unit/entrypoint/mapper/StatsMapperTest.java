@@ -1,5 +1,7 @@
-package br.com.guimsmendes.dnasimians.entrypoint.mapper;
+package br.com.guimsmendes.dnasimians.unit.entrypoint.mapper;
 
+import br.com.guimsmendes.dnasimians.entrypoint.mapper.StatsMapper;
+import br.com.guimsmendes.dnasimians.entrypoint.mapper.StatsMapperImpl;
 import br.com.guimsmendes.dnasimians.entrypoint.model.response.StatsResponse;
 import br.com.guimsmendes.dnasimians.usecase.domain.DnaDomain;
 import org.junit.jupiter.api.BeforeEach;

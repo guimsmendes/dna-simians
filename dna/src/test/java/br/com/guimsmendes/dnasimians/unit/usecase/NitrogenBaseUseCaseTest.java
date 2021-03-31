@@ -1,5 +1,6 @@
-package br.com.guimsmendes.dnasimians.usecase;
+package br.com.guimsmendes.dnasimians.unit.usecase;
 
+import br.com.guimsmendes.dnasimians.usecase.NitrogenBaseUseCase;
 import br.com.guimsmendes.dnasimians.usecase.domain.enums.DnaType;
 import br.com.guimsmendes.dnasimians.usecase.exception.UseCaseException;
 import org.junit.jupiter.api.Assertions;

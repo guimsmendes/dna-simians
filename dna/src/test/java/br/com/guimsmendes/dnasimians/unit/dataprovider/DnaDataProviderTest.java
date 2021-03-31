@@ -1,5 +1,6 @@
-package br.com.guimsmendes.dnasimians.dataprovider;
+package br.com.guimsmendes.dnasimians.unit.dataprovider;
 
+import br.com.guimsmendes.dnasimians.dataprovider.DnaDataProvider;
 import br.com.guimsmendes.dnasimians.dataprovider.exception.DataProviderException;
 import br.com.guimsmendes.dnasimians.dataprovider.repository.DnaRepository;
 import br.com.guimsmendes.dnasimians.usecase.domain.DnaDomain;

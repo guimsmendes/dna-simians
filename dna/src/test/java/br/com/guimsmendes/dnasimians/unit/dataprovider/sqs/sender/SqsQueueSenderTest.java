@@ -1,6 +1,7 @@
-package br.com.guimsmendes.dnasimians.dataprovider.sqs.sender;
+package br.com.guimsmendes.dnasimians.unit.dataprovider.sqs.sender;
 
 import br.com.guimsmendes.dnasimians.dataprovider.exception.DataProviderException;
+import br.com.guimsmendes.dnasimians.dataprovider.sqs.sender.SqsQueueSender;
 import br.com.guimsmendes.dnasimians.usecase.domain.DnaDomain;
 import br.com.guimsmendes.dnasimians.usecase.domain.enums.DnaType;
 import io.awspring.cloud.messaging.core.QueueMessagingTemplate;

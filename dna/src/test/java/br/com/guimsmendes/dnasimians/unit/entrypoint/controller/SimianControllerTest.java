@@ -1,5 +1,6 @@
-package br.com.guimsmendes.dnasimians.entrypoint.controller;
+package br.com.guimsmendes.dnasimians.unit.entrypoint.controller;
 
+import br.com.guimsmendes.dnasimians.entrypoint.controller.SimianController;
 import br.com.guimsmendes.dnasimians.entrypoint.mapper.StatsMapper;
 import br.com.guimsmendes.dnasimians.entrypoint.model.request.SimianRequest;
 import br.com.guimsmendes.dnasimians.entrypoint.model.response.StatsResponse;

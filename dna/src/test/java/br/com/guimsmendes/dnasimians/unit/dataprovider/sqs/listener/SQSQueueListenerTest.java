@@ -1,9 +1,10 @@
-package br.com.guimsmendes.dnasimians.dataprovider.sqs.listener;
+package br.com.guimsmendes.dnasimians.unit.dataprovider.sqs.listener;
 
 import br.com.guimsmendes.dnasimians.dataprovider.exception.DataProviderException;
 import br.com.guimsmendes.dnasimians.dataprovider.mapper.DnaMapper;
 import br.com.guimsmendes.dnasimians.dataprovider.model.DnaEntity;
 import br.com.guimsmendes.dnasimians.dataprovider.repository.DnaRepository;
+import br.com.guimsmendes.dnasimians.dataprovider.sqs.listener.SQSQueueListener;
 import br.com.guimsmendes.dnasimians.usecase.domain.DnaDomain;
 import br.com.guimsmendes.dnasimians.usecase.domain.enums.DnaType;
 import org.junit.jupiter.api.Assertions;
