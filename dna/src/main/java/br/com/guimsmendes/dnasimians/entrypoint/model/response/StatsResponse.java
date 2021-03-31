@@ -8,10 +8,8 @@ import lombok.*;
 import java.math.BigDecimal;
 
 @Getter
-@Setter
 @Builder
 @AllArgsConstructor
-@NoArgsConstructor
 @JsonNaming(PropertyNamingStrategy.SnakeCaseStrategy.class)
 public class StatsResponse {
     private int countMutantDna;

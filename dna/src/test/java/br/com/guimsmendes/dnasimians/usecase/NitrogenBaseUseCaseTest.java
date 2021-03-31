@@ -1,6 +1,8 @@
 package br.com.guimsmendes.dnasimians.usecase;
 
 import br.com.guimsmendes.dnasimians.usecase.domain.enums.DnaType;
+import br.com.guimsmendes.dnasimians.usecase.exception.UseCaseException;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -47,6 +49,12 @@ class NitrogenBaseUseCaseTest {
         assertEquals(DnaType.HUMAN, dnaType);
     }
 
+    @Test
+    public void getInputOutOfBoundsException(){
+        Assertions.assertThrows(UseCaseException.InputOutOfBounds.class,
+                () -> nitrogenBaseUseCase.checkDnaType(mockInputOutOfBounds()));
+    }
+
     private List<List<Character>> mockSimianDnaSequenceHorizontal(){
         List<Character> dnaList = new ArrayList<>();
         int i;
@@ -75,11 +83,11 @@ class NitrogenBaseUseCaseTest {
 
     }
     private List<List<Character>> mockSimianDnaSequenceDiagonalUpperDirection(){
-        List<Character> dnaList = new ArrayList<>();
-        dnaList.add('A');
-        dnaList.add('G');
-        dnaList.add('C');
-        dnaList.add('T');
+        List<Character> dnaList1 = new ArrayList<>();
+        dnaList1.add('A');
+        dnaList1.add('G');
+        dnaList1.add('C');
+        dnaList1.add('T');
         List<Character> dnaList2 = new ArrayList<>();
         dnaList2.add('T');
         dnaList2.add('A');
@@ -97,7 +105,7 @@ class NitrogenBaseUseCaseTest {
         dnaList4.add('A');
 
         List<List<Character>> dnaSequence = new ArrayList<>();
-        dnaSequence.add(dnaList);
+        dnaSequence.add(dnaList1);
         dnaSequence.add(dnaList2);
         dnaSequence.add(dnaList3);
         dnaSequence.add(dnaList4);
@@ -105,11 +113,11 @@ class NitrogenBaseUseCaseTest {
         return dnaSequence;
     }
     private List<List<Character>> mockSimianDnaSequenceDiagonalDownerDirection(){
-        List<Character> dnaList = new ArrayList<>();
-        dnaList.add('T');
-        dnaList.add('G');
-        dnaList.add('C');
-        dnaList.add('A');
+        List<Character> dnaList1 = new ArrayList<>();
+        dnaList1.add('T');
+        dnaList1.add('G');
+        dnaList1.add('C');
+        dnaList1.add('A');
         List<Character> dnaList2 = new ArrayList<>();
         dnaList2.add('T');
         dnaList2.add('C');
@@ -127,7 +135,7 @@ class NitrogenBaseUseCaseTest {
         dnaList4.add('A');
 
         List<List<Character>> dnaSequence = new ArrayList<>();
-        dnaSequence.add(dnaList);
+        dnaSequence.add(dnaList1);
         dnaSequence.add(dnaList2);
         dnaSequence.add(dnaList3);
         dnaSequence.add(dnaList4);
@@ -136,11 +144,11 @@ class NitrogenBaseUseCaseTest {
     }
 
     private List<List<Character>> mockHumanDnaSequence(){
-        List<Character> dnaList = new ArrayList<>();
-        dnaList.add('A');
-        dnaList.add('A');
-        dnaList.add('A');
-        dnaList.add('T');
+        List<Character> dnaList1 = new ArrayList<>();
+        dnaList1.add('A');
+        dnaList1.add('A');
+        dnaList1.add('A');
+        dnaList1.add('T');
 
         List<Character> dnaList2 = new ArrayList<>();
         dnaList2.add('T');
@@ -161,11 +169,36 @@ class NitrogenBaseUseCaseTest {
         dnaList4.add('T');
 
         List<List<Character>> dnaSequence = new ArrayList<>();
-        dnaSequence.add(dnaList);
+        dnaSequence.add(dnaList1);
         dnaSequence.add(dnaList2);
         dnaSequence.add(dnaList3);
         dnaSequence.add(dnaList4);
         return dnaSequence;
     }
+
+    private List<List<Character>> mockInputOutOfBounds(){
+        List<Character> dnaList1 = new ArrayList<>();
+        dnaList1.add('A');
+        dnaList1.add('A');
+        dnaList1.add('A');
+        dnaList1.add('T');
+        List<Character> dnaList2 = new ArrayList<>();
+        dnaList2.add('T');
+        dnaList2.add('A');
+        dnaList2.add('A');
+        dnaList2.add('C');
+        dnaList2.add('T');
+        dnaList2.add('G');
+        dnaList2.add('A');
+        dnaList2.add('C');
+        List<Character> dnaList3 = new ArrayList<>();
+        List<List<Character>> dnaSequence = new ArrayList<>();
+        dnaSequence.add(dnaList1);
+        dnaSequence.add(dnaList2);
+        dnaSequence.add(dnaList3);
+        return dnaSequence;
+
+    }
+
 
 }

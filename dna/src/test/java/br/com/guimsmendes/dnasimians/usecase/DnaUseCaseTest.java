@@ -16,7 +16,7 @@ import java.util.List;
 import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.*;
-import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.ArgumentMatchers.anyList;
 import static org.mockito.Mockito.when;
 
 @SpringBootTest
@@ -33,14 +33,14 @@ class DnaUseCaseTest {
 
     @Test
     void isSimianTrue() {
-        when(nitrogenBaseUseCase.checkDnaType(any(List.class))).thenReturn(DnaType.SIMIAN);
+        when(nitrogenBaseUseCase.checkDnaType(anyList())).thenReturn(DnaType.SIMIAN);
         boolean response = dnaUseCase.isSimian(mockDnaDomain());
         assertTrue(response);
     }
 
     @Test
     void isSimianFalse() {
-        when(nitrogenBaseUseCase.checkDnaType(any(List.class))).thenReturn(DnaType.HUMAN);
+        when(nitrogenBaseUseCase.checkDnaType(anyList())).thenReturn(DnaType.HUMAN);
         boolean response = dnaUseCase.isSimian(mockDnaDomain());
         assertFalse(response);
     }

@@ -6,8 +6,6 @@ public class UseCaseException extends RuntimeException {
 	 */
 	private static final long serialVersionUID = 2271690326153159469L;
 
-	UseCaseException() {
-    }
 
     public static class NoRecordsFound extends RuntimeException {
         /**
@@ -19,4 +17,15 @@ public class UseCaseException extends RuntimeException {
             super(message);
         }
     }
+
+	public static class InputOutOfBounds extends RuntimeException {
+		/**
+		 *
+		 */
+		private static final long serialVersionUID = 50293939377715639L;
+
+		public InputOutOfBounds(String message) {
+			super(message);
+		}
+	}
 }

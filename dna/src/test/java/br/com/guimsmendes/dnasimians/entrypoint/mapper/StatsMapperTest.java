@@ -29,6 +29,11 @@ class StatsMapperTest {
         assertEquals(BigDecimal.valueOf(0.4), statsResponse.getRatio());
 
     }
+    
+    @Test
+    void toStatsResponseNull() {
+    	assertNull(statsMapper.toStatsResponse(null));
+    }
 
     private DnaDomain mockDnaDomain(){
         DnaDomain dnaDomain = new DnaDomain();

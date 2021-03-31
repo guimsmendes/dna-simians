@@ -4,11 +4,15 @@ import br.com.guimsmendes.dnasimians.usecase.domain.DnaDomain;
 import br.com.guimsmendes.dnasimians.usecase.domain.enums.DnaType;
 import br.com.guimsmendes.dnasimians.usecase.exception.UseCaseException;
 import br.com.guimsmendes.dnasimians.usecase.gateway.DnaGateway;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
 public class DnaUseCase {
+
+    private static final Logger LOGGER = LoggerFactory.getLogger(DnaUseCase.class);
 
     private final DnaGateway dnaGateway;
     private final NitrogenBaseUseCase nitrogenBaseUseCase;
@@ -21,7 +25,12 @@ public class DnaUseCase {
 
     public boolean isSimian(DnaDomain dnaDomain) {
         dnaDomain.setDnaType(nitrogenBaseUseCase.checkDnaType(dnaDomain.getDnaSequence()));
-        dnaGateway.postDnaSequence(dnaDomain);
+        try {
+            dnaGateway.postDnaSequence(dnaDomain);
+        }
+        catch(Exception e){
+            LOGGER.error("Unable to save the DNA into the database. Message: {}", e.getMessage());
+        }
         return dnaDomain.getDnaType().equals(DnaType.SIMIAN);
     }
 
@@ -29,7 +38,7 @@ public class DnaUseCase {
         return dnaGateway.getStats().map(dnaDomain -> {
             dnaDomain.setRatio();
             return dnaDomain;
-        }).orElseThrow(() -> new UseCaseException.NoRecordsFound("Unable to retrieve records."));
+        }).orElseThrow(() -> new UseCaseException.NoRecordsFound("Unable to retrieve human records."));
     }
 
 

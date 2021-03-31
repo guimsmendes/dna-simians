@@ -8,13 +8,15 @@ import br.com.guimsmendes.dnasimians.usecase.gateway.DnaGateway;
 
 import java.util.Optional;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
 public class DnaDataProvider implements DnaGateway {
 
-    private static final int ZERO = 0;
+    private static final Logger LOGGER = LoggerFactory.getLogger(DnaDataProvider.class);
 
     private final SqsQueueSender sqsQueueSender;
     private final DnaRepository dnaRepository;
@@ -32,6 +34,12 @@ public class DnaDataProvider implements DnaGateway {
 
     @Override
     public Optional<DnaDomain> getStats() {
-        return Optional.of(new DnaDomain(dnaRepository.count(DnaType.SIMIAN).orElse(ZERO), dnaRepository.count(DnaType.HUMAN).orElse(ZERO)));
+        try {
+            return Optional.of(new DnaDomain(Integer.valueOf((Integer) dnaRepository.count(DnaType.SIMIAN.toString())),
+                    Integer.valueOf((Integer) dnaRepository.count(DnaType.HUMAN.toString()))));
+        } catch (Exception e) {
+            LOGGER.error("Unable to get Stats from Database. Message: {}", e.getMessage());
+            return Optional.empty();
+        }
     }
 }
