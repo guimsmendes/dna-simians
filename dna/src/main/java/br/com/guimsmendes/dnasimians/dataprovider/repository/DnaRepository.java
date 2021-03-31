@@ -42,6 +42,6 @@ public class DnaRepository {
     @Transactional
     public void delete(){
         entityManager.createNativeQuery("DELETE FROM dna u").executeUpdate();
-    };
+    }
 
 }

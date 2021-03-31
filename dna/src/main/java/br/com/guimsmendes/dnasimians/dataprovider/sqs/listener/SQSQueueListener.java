@@ -39,7 +39,7 @@ public class SQSQueueListener {
         LOGGER.info("SQS CONSUMER INTERCEPTOR = TOPIC: {} CORRELATION.ID: {}", "${cloud.aws.sqs.endpoint}", correlationId);
 
         Object response = dnaRepository.postDnaSequence(dnaMapper.toDnaEntity(dnaDomain)).toString();
-        if (!(response == "")) {
+        if (response != "") {
             LOGGER.info("The DNA record from Type: {} and Id: {} has been successfully added to the database: {}, table {}.", dnaDomain.getDnaType(), response, POSTGRES_DATABASE_NAME, DNA_TABLE_NAME);
         } else {
             throw new DataProviderException

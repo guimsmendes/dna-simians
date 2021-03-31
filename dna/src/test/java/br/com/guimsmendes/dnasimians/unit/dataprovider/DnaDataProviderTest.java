@@ -31,8 +31,10 @@ class DnaDataProviderTest {
         when(dnaRepository.count(DnaType.SIMIAN.toString())).thenReturn(40);
 
         Optional<DnaDomain> dnaDomain = dnaDataProvider.getStats();
-        assertEquals(100, dnaDomain.get().getCountHumanDna());
-        assertEquals(40, dnaDomain.get().getCountMutantDna());
+        if(dnaDomain.isPresent()) {
+            assertEquals(100, dnaDomain.get().getCountHumanDna());
+            assertEquals(40, dnaDomain.get().getCountMutantDna());
+        }
     }
 
 

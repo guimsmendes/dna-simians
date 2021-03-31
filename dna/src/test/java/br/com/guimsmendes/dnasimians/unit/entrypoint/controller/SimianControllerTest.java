@@ -59,7 +59,7 @@ class SimianControllerTest {
     void invalidRequestBody() {
         SimianRequest simianRequest = mockInvalidSimianRequest();
         Assertions.assertThrows(IllegalArgumentException.class,
-                () -> simianRequest.asDnaDomain());
+                simianRequest::asDnaDomain);
     }
 
     @Test

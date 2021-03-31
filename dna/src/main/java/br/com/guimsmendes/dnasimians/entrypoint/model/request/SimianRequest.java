@@ -18,9 +18,8 @@ public class SimianRequest {
 
     public DnaDomain asDnaDomain() {
         List<List<Character>> dnaSequence = new ArrayList<>();
-        this.dna.forEach(s -> {
-                    dnaSequence.add(NitrogenBaseType.fromString(s).orElseThrow(()-> new IllegalArgumentException("The input has to respect the Characters: A, T, C, G")));
-                }
+        this.dna.forEach(s ->
+                dnaSequence.add(NitrogenBaseType.fromString(s).orElseThrow(() -> new IllegalArgumentException("The input has to respect the Characters: A, T, C, G")))
         );
         DnaDomain dnaDomain = new DnaDomain();
         dnaDomain.setDnaSequence(dnaSequence);

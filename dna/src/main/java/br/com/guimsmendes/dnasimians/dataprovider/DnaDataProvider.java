@@ -35,8 +35,8 @@ public class DnaDataProvider implements DnaGateway {
     @Override
     public Optional<DnaDomain> getStats() {
         try {
-            return Optional.of(new DnaDomain(Integer.valueOf((Integer) dnaRepository.count(DnaType.SIMIAN.toString())),
-                    Integer.valueOf((Integer) dnaRepository.count(DnaType.HUMAN.toString()))));
+            return Optional.of(new DnaDomain((Integer) dnaRepository.count(DnaType.SIMIAN.toString()),
+                    (Integer) dnaRepository.count(DnaType.HUMAN.toString())));
         } catch (Exception e) {
             LOGGER.error("Unable to get Stats from Database. Message: {}", e.getMessage());
             return Optional.empty();

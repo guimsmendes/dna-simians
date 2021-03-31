@@ -13,22 +13,22 @@ import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExcep
 @ControllerAdvice
 public class ResourceExceptionHandler extends ResponseEntityExceptionHandler {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(SimianController.class);
+    private static final Logger LOGGERERROR = LoggerFactory.getLogger(SimianController.class);
 
     @ExceptionHandler(UseCaseException.NoRecordsFound.class)
     public ResponseEntity<Object> handleNotFoundException(UseCaseException.NoRecordsFound ex) {
-        LOGGER.error(ex.getMessage());
+        LOGGERERROR.error(ex.getMessage());
         return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
     }
 
     @ExceptionHandler(IllegalArgumentException.class)
     public ResponseEntity<Object> handleNotFoundException(IllegalArgumentException ex) {
-        LOGGER.error(ex.getMessage());
+        LOGGERERROR.error(ex.getMessage());
         return ResponseEntity.status(HttpStatus.BAD_REQUEST).build();
     }
     @ExceptionHandler(UseCaseException.InputOutOfBounds.class)
     public ResponseEntity<Object> handleNotFoundException(UseCaseException.InputOutOfBounds ex) {
-        LOGGER.error(ex.getMessage());
+        LOGGERERROR.error(ex.getMessage());
         return ResponseEntity.status(HttpStatus.BAD_REQUEST).build();
     }
 
