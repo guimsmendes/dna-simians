@@ -21,7 +21,7 @@
         <sonar.java.coveragePlugin>jacoco</sonar.java.coveragePlugin>
         <sonar.dynamicAnalysis>reuseReports</sonar.dynamicAnalysis>
 
-        <sonar.jacoco.reportsPaths>${project.build.directory}/jacoco-ut.exec</sonar.jacoco.reportsPaths>
+        <jacoco.execution.file>${project.build.directory}/coverage-reports/jacoco.exec</jacoco.execution.file>
         <sonar.tests>src/test/java</sonar.tests>
         <sonar.projectKey>guimsmendes_dna-simians</sonar.projectKey>
         <sonar.organization>guimsmendes</sonar.organization>
@@ -231,6 +231,10 @@
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
                 <version>0.8.5</version>
+                <configuration>
+                    <destFile>${jacoco.execution.file}</destFile>
+                    <dataFile>${jacoco.execution.file}</dataFile>
+                </configuration>
                 <executions>
                     <execution>
                         <id>prepare-agent</id>
