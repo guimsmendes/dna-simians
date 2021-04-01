@@ -1,6 +1,5 @@
 package br.com.guimsmendes.dnasimians.entrypoint.exception;
 
-import br.com.guimsmendes.dnasimians.entrypoint.controller.SimianController;
 import br.com.guimsmendes.dnasimians.usecase.exception.UseCaseException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -13,7 +12,7 @@ import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExcep
 @ControllerAdvice
 public class ResourceExceptionHandler extends ResponseEntityExceptionHandler {
 
-    private static final Logger LOGGERERROR = LoggerFactory.getLogger(SimianController.class);
+    private static final Logger LOGGERERROR = LoggerFactory.getLogger(ResourceExceptionHandler.class);
 
     @ExceptionHandler(UseCaseException.NoRecordsFound.class)
     public ResponseEntity<Object> handleNotFoundException(UseCaseException.NoRecordsFound ex) {

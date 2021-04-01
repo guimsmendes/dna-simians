@@ -6,11 +6,13 @@ import br.com.guimsmendes.dnasimians.usecase.domain.DnaDomain;
 import br.com.guimsmendes.dnasimians.usecase.domain.enums.DnaType;
 import br.com.guimsmendes.dnasimians.usecase.exception.UseCaseException;
 import br.com.guimsmendes.dnasimians.usecase.gateway.DnaGateway;
+
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
-import org.springframework.boot.test.context.SpringBootTest;
+import org.mockito.junit.jupiter.MockitoExtension;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
@@ -21,7 +23,7 @@ import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.ArgumentMatchers.anyList;
 import static org.mockito.Mockito.when;
 
-@SpringBootTest
+@ExtendWith(MockitoExtension.class)
 class DnaUseCaseTest {
 
     @InjectMocks
@@ -32,6 +34,7 @@ class DnaUseCaseTest {
 
     @Mock
     private NitrogenBaseUseCase nitrogenBaseUseCase;
+    
 
     @Test
     void isSimianTrue() {

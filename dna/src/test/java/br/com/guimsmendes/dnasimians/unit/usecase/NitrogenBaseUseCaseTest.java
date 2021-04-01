@@ -5,53 +5,54 @@ import br.com.guimsmendes.dnasimians.usecase.domain.enums.DnaType;
 import br.com.guimsmendes.dnasimians.usecase.exception.UseCaseException;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
-import org.springframework.boot.test.context.SpringBootTest;
+import org.mockito.junit.jupiter.MockitoExtension;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-@SpringBootTest
+@ExtendWith(MockitoExtension.class)
 class NitrogenBaseUseCaseTest {
 
     @InjectMocks
     private NitrogenBaseUseCase nitrogenBaseUseCase;
 
     @Test
-    public void checkSimianDnaTypeHorizontalTest() {
+    void checkSimianDnaTypeHorizontalTest() {
         DnaType dnaType = nitrogenBaseUseCase.checkDnaType(mockSimianDnaSequenceHorizontal());
         assertEquals(DnaType.SIMIAN, dnaType);
     }
 
     @Test
-    public void checkSimianDnaTypeVerticalTest() {
+    void checkSimianDnaTypeVerticalTest() {
         DnaType dnaType = nitrogenBaseUseCase.checkDnaType(mockSimianDnaSequenceVertical());
         assertEquals(DnaType.SIMIAN, dnaType);
     }
 
     @Test
-    public void checkSimianDnaTypeDiagonalUpperTest() {
+    void checkSimianDnaTypeDiagonalUpperTest() {
         DnaType dnaType = nitrogenBaseUseCase.checkDnaType(mockSimianDnaSequenceDiagonalUpperDirection());
         assertEquals(DnaType.SIMIAN, dnaType);
     }
 
 
     @Test
-    public void checkSimianDnaTypeDiagonalDownerTest() {
+    void checkSimianDnaTypeDiagonalDownerTest() {
         DnaType dnaType = nitrogenBaseUseCase.checkDnaType(mockSimianDnaSequenceDiagonalDownerDirection());
         assertEquals(DnaType.SIMIAN, dnaType);
     }
 
     @Test
-    public void checkHumanDnaTypeTest() {
+    void checkHumanDnaTypeTest() {
         DnaType dnaType = nitrogenBaseUseCase.checkDnaType(mockHumanDnaSequence());
         assertEquals(DnaType.HUMAN, dnaType);
     }
 
     @Test
-    public void getInputOutOfBoundsException(){
+    void getInputOutOfBoundsException(){
         Assertions.assertThrows(UseCaseException.InputOutOfBounds.class,
                 () -> nitrogenBaseUseCase.checkDnaType(mockInputOutOfBounds()));
     }
