@@ -12,7 +12,7 @@ public enum NitrogenBaseType {
         for (char nitrogenBase : dnaNitrogenBases.toCharArray()) {
             for (NitrogenBaseType nitrogenBaseType : values()) {
                 if (nitrogenBaseType.name().equalsIgnoreCase(String.valueOf(nitrogenBase))) {
-                    chars.add(nitrogenBase);
+                    chars.add(Character.toUpperCase(nitrogenBase));
                 }
             }
         }

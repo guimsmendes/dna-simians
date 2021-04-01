@@ -14,7 +14,6 @@ import io.awspring.cloud.messaging.listener.SqsMessageDeletionPolicy;
 import io.awspring.cloud.messaging.listener.annotation.SqsListener;
 
 import java.util.Map;
-import java.util.UUID;
 
 import static br.com.guimsmendes.dnasimians.dataprovider.constant.Constants.*;
 
@@ -34,8 +33,8 @@ public class SQSQueueListener {
 
     @SqsListener(value = "${cloud.aws.sqs.endpoint}", deletionPolicy = SqsMessageDeletionPolicy.ON_SUCCESS)
     public void dnaSequenceListener(DnaDomain dnaDomain, Map<String, Object> headers) {
-        UUID correlationId = (UUID) headers.get(CORRELATION_ID);
-        MDC.put("correlation.id", String.valueOf(correlationId));
+        String correlationId = (String) headers.get(CORRELATION_ID);
+        MDC.put("correlation.id", correlationId);
         LOGGER.info("SQS CONSUMER INTERCEPTOR = TOPIC: {} CORRELATION.ID: {}", "${cloud.aws.sqs.endpoint}", correlationId);
 
         Object response = dnaRepository.postDnaSequence(dnaMapper.toDnaEntity(dnaDomain)).toString();

@@ -34,7 +34,7 @@ public class SqsQueueSender {
         try {
             UUID correlationId = UUID.randomUUID();
             Map<String, Object> headers = new HashMap<>();
-            headers.put(CORRELATION_ID, correlationId);
+            headers.put(CORRELATION_ID, correlationId.toString());
             queueMessagingTemplate.convertAndSend(sqsEndPoint, dnaDomain, headers);
             LOGGER.info("SQS PRODUCER INTERCEPTOR = TOPIC: {} CORRELATION.ID: {}", sqsEndPoint, correlationId);
         } catch (Exception e) {

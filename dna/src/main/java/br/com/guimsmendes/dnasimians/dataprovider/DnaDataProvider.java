@@ -5,6 +5,7 @@ import br.com.guimsmendes.dnasimians.dataprovider.sqs.sender.SqsQueueSender;
 import br.com.guimsmendes.dnasimians.usecase.domain.DnaDomain;
 import br.com.guimsmendes.dnasimians.usecase.domain.enums.DnaType;
 import br.com.guimsmendes.dnasimians.usecase.gateway.DnaGateway;
+import java.math.BigInteger;
 
 import java.util.Optional;
 
@@ -35,8 +36,8 @@ public class DnaDataProvider implements DnaGateway {
     @Override
     public Optional<DnaDomain> getStats() {
         try {
-            return Optional.of(new DnaDomain((Integer) dnaRepository.count(DnaType.SIMIAN.toString()),
-                    (Integer) dnaRepository.count(DnaType.HUMAN.toString())));
+            return Optional.of(new DnaDomain(((BigInteger) dnaRepository.count(DnaType.SIMIAN.toString())).intValue(),
+                    ((BigInteger) dnaRepository.count(DnaType.HUMAN.toString())).intValue()));
         } catch (Exception e) {
             LOGGER.error("Unable to get Stats from Database. Message: {}", e.getMessage());
             return Optional.empty();

@@ -1,4 +1,4 @@
-package br.com.guimsmendes.dnasimians.unit.dataprovider.repository;
+package br.com.guimsmendes.dnasimians.integration.dataprovider.repository;
 
 import br.com.guimsmendes.dnasimians.dataprovider.exception.DataProviderException;
 import br.com.guimsmendes.dnasimians.dataprovider.model.DnaEntity;

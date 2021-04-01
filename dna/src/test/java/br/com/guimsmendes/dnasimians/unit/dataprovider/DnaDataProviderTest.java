@@ -11,6 +11,7 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 
+import java.math.BigInteger;
 import java.util.Optional;
 import java.util.UUID;
 
@@ -28,14 +29,12 @@ class DnaDataProviderTest {
 
     @Test
     void getValidStats() {
-        when(dnaRepository.count(DnaType.HUMAN.toString())).thenReturn(100);
-        when(dnaRepository.count(DnaType.SIMIAN.toString())).thenReturn(40);
+        when(dnaRepository.count(DnaType.HUMAN.toString())).thenReturn(BigInteger.valueOf(100));
+        when(dnaRepository.count(DnaType.SIMIAN.toString())).thenReturn(BigInteger.valueOf(40));
 
         Optional<DnaDomain> dnaDomain = dnaDataProvider.getStats();
-        if(dnaDomain.isPresent()) {
             assertEquals(100, dnaDomain.get().getCountHumanDna());
             assertEquals(40, dnaDomain.get().getCountMutantDna());
-        }
     }
 
 

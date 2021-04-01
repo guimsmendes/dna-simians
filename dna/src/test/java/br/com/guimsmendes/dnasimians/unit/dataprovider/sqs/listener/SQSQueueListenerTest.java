@@ -44,7 +44,7 @@ class SQSQueueListenerTest {
     private Map<String, Object> mockHeader(){
         UUID correlationId = UUID.randomUUID();
         Map<String, Object> headers = new HashMap<>();
-        headers.put(CORRELATION_ID, correlationId);
+        headers.put(CORRELATION_ID, correlationId.toString());
         return headers;
     }
 

@@ -4,6 +4,9 @@ import br.com.guimsmendes.dnasimians.entrypoint.mapper.StatsMapper;
 import br.com.guimsmendes.dnasimians.entrypoint.model.request.SimianRequest;
 import br.com.guimsmendes.dnasimians.entrypoint.model.response.StatsResponse;
 import br.com.guimsmendes.dnasimians.usecase.DnaUseCase;
+
+import javax.validation.Valid;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,12 +32,12 @@ public class SimianController {
     }
 
     @PostMapping("/simian")
-    public ResponseEntity<Object> isSimian(@RequestBody SimianRequest request) {
+    public ResponseEntity<Object> isSimian(@RequestBody @Valid SimianRequest request) {
         if (!dnaUseCase.isSimian(request.asDnaDomain())) {
-            LOGGER.info("Able to retrieve a Simian DNA Type");
+            LOGGER.info("Able to retrieve a Human DNA Type");
             return ResponseEntity.status(HttpStatus.FORBIDDEN).build();
         }
-        LOGGER.info("Able to retrieve a Human DNA Type");
+        LOGGER.info("Able to retrieve a Simian DNA Type");
         return ResponseEntity.status(HttpStatus.OK).build();
     }
 
