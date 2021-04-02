@@ -1,10 +1,5 @@
 name: Docker
 
-env:
-      RDS_PASSWORD: ${{ secrets.RDS_PASSWORD }}
-      AWS_ACCES_KEY: ${{ secrets.AWS_ACCES_KEY }}
-      AWS_SECRET_KEY: ${{ secrets.AWS_SECRET_KEY }}
-
 on:
   push:
     # Publish `main` as Docker `latest` image.
@@ -39,6 +34,10 @@ jobs:
           else
             docker build . --file Dockerfile
           fi
+        env:
+            RDS_PASSWORD: ${{ secrets.RDS_PASSWORD }}
+            AWS_ACCES_KEY: ${{ secrets.AWS_ACCES_KEY }}
+            AWS_SECRET_KEY: ${{ secrets.AWS_SECRET_KEY }}
 
 
 
@@ -56,9 +55,17 @@ jobs:
 
       - name: Build image
         run: docker build . --file Dockerfile --tag $IMAGE_NAME
+        env:
+            RDS_PASSWORD: ${{ secrets.RDS_PASSWORD }}
+            AWS_ACCES_KEY: ${{ secrets.AWS_ACCES_KEY }}
+            AWS_SECRET_KEY: ${{ secrets.AWS_SECRET_KEY }}
 
       - name: Log into registry
         run: echo "${{ secrets.GITHUB_TOKEN }}" | docker login docker.pkg.github.com -u ${{ github.actor }} --password-stdin
+        env:
+            RDS_PASSWORD: ${{ secrets.RDS_PASSWORD }}
+            AWS_ACCES_KEY: ${{ secrets.AWS_ACCES_KEY }}
+            AWS_SECRET_KEY: ${{ secrets.AWS_SECRET_KEY }}
 
       - name: Push image
         run: |
@@ -81,3 +88,7 @@ jobs:
 
           docker tag $IMAGE_NAME $IMAGE_ID:$VERSION
           docker push $IMAGE_ID:$VERSION
+        env:
+            RDS_PASSWORD: ${{ secrets.RDS_PASSWORD }}
+            AWS_ACCES_KEY: ${{ secrets.AWS_ACCES_KEY }}
+            AWS_SECRET_KEY: ${{ secrets.AWS_SECRET_KEY }}
