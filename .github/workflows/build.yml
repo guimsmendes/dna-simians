@@ -17,13 +17,6 @@ jobs:
         fetch-depth: 0
     - name: SonarCloud Scan
       uses: SonarSource/sonarcloud-github-action@v1.5
-      with:
-        args: >
-          -Dsonar.projectKey=guimsmendes_dna-simians    
-          -Dsonar.organization=guimsmendes    
-          -Dsonar.host.url=https://sonarcloud.io    
-          -Dsonar.login=${{ secrets.SONAR_TOKEN }}
-          -Dsonar.coverage.jacoco.xmlReportPaths=$(find "$(pwd)" -path '*jacoco.xml' | sed 's/.*/&/' | tr '\n' ',')
 
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
