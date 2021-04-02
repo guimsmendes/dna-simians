@@ -20,7 +20,10 @@ jobs:
         settings-path: ${{ github.workspace }} # location for the settings.xml fi
         
     - name: Build with Maven
-      
+      env:
+            AWS_ACCESS_KEY: ${{ secrets.AWS_ACCESS_KEY }} 
+            AWS_SECRET_KEY: ${{ secrets.AWS_SECRET_KEY }}
+            RDS_PASSWORD: ${{ secrets.RDS_PASSWORD }}      
       run: mvn clean jacoco:prepare-agent install jacoco:report --file pom.xml
 
     - name: Publish to Sonar Report
