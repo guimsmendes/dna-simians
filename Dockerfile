@@ -8,4 +8,4 @@ run apt-get install -y maven
 run mvn install
 
 expose 8080
-cmd ["java", "-jar", "target/dna-simians-0.0.1.jar"]
+cmd ["java", "-jar", "target/dna-simians-1.0.0.jar"]
