@@ -1,5 +1,10 @@
 name: Docker
 
+env:
+      RDS_PASSWORD: ${{ secrets.RDS_PASSWORD }}
+      AWS_ACCES_KEY: ${{ secrets.AWS_ACCES_KEY }}
+      AWS_SECRET_KEY: ${{ secrets.AWS_SECRET_KEY }}
+
 on:
   push:
     # Publish `main` as Docker `latest` image.
@@ -34,10 +39,7 @@ jobs:
           else
             docker build . --file Dockerfile
           fi
-        env:
-          secrets.RDS_PASSWORD: ${{ secrets.RDS_PASSWORD }}
-          secrets.AWS_ACCES_KEY: ${{ secrets.AWS_ACCES_KEY }}
-          secrets.AWS_SECRET_KEY: ${{ secrets.AWS_SECRET_KEY }}
+
 
 
   # Push image to GitHub Packages.
