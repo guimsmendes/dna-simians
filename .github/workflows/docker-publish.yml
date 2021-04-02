@@ -36,7 +36,7 @@ jobs:
             docker-compose --file docker-compose.test.yml build
             docker-compose --file docker-compose.test.yml run sut
           else
-            docker build . --file Dockerfile --build-arg AWS_ACCESS_KEY=$AWS_ACCESS_KEY AWS_SECRET_KEY=$AWS_SECRET_KEY RDS_PASSWORD=$RDS_PASSWORD
+            docker build . --file Dockerfile --build-arg AWS_ACCESS_KEY=$AWS_ACCESS_KEY --build-arg AWS_SECRET_KEY=$AWS_SECRET_KEY --build-arg RDS_PASSWORD=$RDS_PASSWORD
           fi
 
   # Push image to GitHub Packages.
