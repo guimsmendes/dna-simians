@@ -1,0 +1,117 @@
+
+Ybr.com.guimsmendes.dnasimians.dataprovider.DnaDataProvider#getStats()Ljava/util/Optional;~
+t/home/mendes/Documents/dna-simians/dna/src/main/java/br/com/guimsmendes/dnasimians/dataprovider/DnaDataProvider.java. .($"13*¥
+13~
+t/home/mendes/Documents/dna-simians/dna/src/main/java/br/com/guimsmendes/dnasimians/dataprovider/DnaDataProvider.java0
+ 0(§
+¤
+~
+t/home/mendes/Documents/dna-simians/dna/src/main/java/br/com/guimsmendes/dnasimians/dataprovider/DnaDataProvider.java02 0(?I
+%0Cbr.com.guimsmendes.dnasimians.dataprovider.repository.DnaRepository"__id*Q*O<
+:br.com.guimsmendes.dnasimians.dataprovider.DnaDataProvider"
+dnaRepositoryÓ
+Ð
+~
+t/home/mendes/Documents/dna-simians/dna/src/main/java/br/com/guimsmendes/dnasimians/dataprovider/DnaDataProvider.java0F 0(T@
+%1:br.com.guimsmendes.dnasimians.usecase.domain.enums.DnaType"__id*
+""˜•
+~
+t/home/mendes/Documents/dna-simians/dna/src/main/java/br/com/guimsmendes/dnasimians/dataprovider/DnaDataProvider.java0F 0(_
+%2java.lang.String"+java.lang.Enum#toString()Ljava/lang/String;*B
+@
+%1:br.com.guimsmendes.dnasimians.usecase.domain.enums.DnaType2
+toString()*
+12*£
+5~
+t/home/mendes/Documents/dna-simians/dna/src/main/java/br/com/guimsmendes/dnasimians/dataprovider/DnaDataProvider.java0 1(O"
+~
+t/home/mendes/Documents/dna-simians/dna/src/main/java/br/com/guimsmendes/dnasimians/dataprovider/DnaDataProvider.java0 1(O
+
+%12java.util.Optional*Á
+6~
+t/home/mendes/Documents/dna-simians/dna/src/main/java/br/com/guimsmendes/dnasimians/dataprovider/DnaDataProvider.java0
+ 1(N¶
+³
+~
+t/home/mendes/Documents/dna-simians/dna/src/main/java/br/com/guimsmendes/dnasimians/dataprovider/DnaDataProvider.java0
+ 1(N
+%12java.util.Optional"=java.util.Optional#of(Ljava/lang/Object;)Ljava/util/Optional;*"
+java.util.Optional*?
+=
+%106br.com.guimsmendes.dnasimians.usecase.domain.DnaDomain*
+5*±
+7~
+t/home/mendes/Documents/dna-simians/dna/src/main/java/br/com/guimsmendes/dnasimians/dataprovider/DnaDataProvider.java0 1(Mú÷
+~
+t/home/mendes/Documents/dna-simians/dna/src/main/java/br/com/guimsmendes/dnasimians/dataprovider/DnaDataProvider.java0 0(#=
+%106br.com.guimsmendes.dnasimians.usecase.domain.DnaDomain"6br.com.guimsmendes.dnasimians.usecase.domain.DnaDomain©
+¦
+~
+t/home/mendes/Documents/dna-simians/dna/src/main/java/br/com/guimsmendes/dnasimians/dataprovider/DnaDataProvider.java0 1(M
+%11"Bbr.com.guimsmendes.dnasimians.usecase.domain.DnaDomain#<init>(II)V*?
+=
+%106br.com.guimsmendes.dnasimians.usecase.domain.DnaDomain*
+	
+%4int*
+	
+%9int*
+6*á
+8~
+t/home/mendes/Documents/dna-simians/dna/src/main/java/br/com/guimsmendes/dnasimians/dataprovider/DnaDataProvider.java1 1(@ÖÓ
+~
+t/home/mendes/Documents/dna-simians/dna/src/main/java/br/com/guimsmendes/dnasimians/dataprovider/DnaDataProvider.java1 1(L	
+%9int" java.math.BigInteger#intValue()I*
+
+%8java.lang.Object2
+intValue()*
+7*™
+9~
+t/home/mendes/Documents/dna-simians/dna/src/main/java/br/com/guimsmendes/dnasimians/dataprovider/DnaDataProvider.java1 1(@Ž‹
+~
+t/home/mendes/Documents/dna-simians/dna/src/main/java/br/com/guimsmendes/dnasimians/dataprovider/DnaDataProvider.java1 1(@
+%8java.lang.Object"obr.com.guimsmendes.dnasimians.dataprovider.repository.DnaRepository#count(Ljava/lang/String;)Ljava/lang/Object;*K
+I
+%5Cbr.com.guimsmendes.dnasimians.dataprovider.repository.DnaRepository*
+
+%7java.lang.String2count(Ljava/lang/String;)*
+8*¤
+10~
+t/home/mendes/Documents/dna-simians/dna/src/main/java/br/com/guimsmendes/dnasimians/dataprovider/DnaDataProvider.java1 1( §
+¤
+~
+t/home/mendes/Documents/dna-simians/dna/src/main/java/br/com/guimsmendes/dnasimians/dataprovider/DnaDataProvider.java1 1( I
+%5Cbr.com.guimsmendes.dnasimians.dataprovider.repository.DnaRepository"__id*Q*O<
+:br.com.guimsmendes.dnasimians.dataprovider.DnaDataProvider"
+dnaRepositoryÓ
+Ð
+~
+t/home/mendes/Documents/dna-simians/dna/src/main/java/br/com/guimsmendes/dnasimians/dataprovider/DnaDataProvider.java1' 1(4@
+%6:br.com.guimsmendes.dnasimians.usecase.domain.enums.DnaType"__id*
+""˜•
+~
+t/home/mendes/Documents/dna-simians/dna/src/main/java/br/com/guimsmendes/dnasimians/dataprovider/DnaDataProvider.java1' 1(?
+%7java.lang.String"+java.lang.Enum#toString()Ljava/lang/String;*B
+@
+%6:br.com.guimsmendes.dnasimians.usecase.domain.enums.DnaType2
+toString()*
+9*ã
+11~
+t/home/mendes/Documents/dna-simians/dna/src/main/java/br/com/guimsmendes/dnasimians/dataprovider/DnaDataProvider.java0% 0(`ÖÓ
+~
+t/home/mendes/Documents/dna-simians/dna/src/main/java/br/com/guimsmendes/dnasimians/dataprovider/DnaDataProvider.java0$ 0(l	
+%4int" java.math.BigInteger#intValue()I*
+
+%3java.lang.Object2
+intValue()*
+10*›
+12~
+t/home/mendes/Documents/dna-simians/dna/src/main/java/br/com/guimsmendes/dnasimians/dataprovider/DnaDataProvider.java02 0(`Ž‹
+~
+t/home/mendes/Documents/dna-simians/dna/src/main/java/br/com/guimsmendes/dnasimians/dataprovider/DnaDataProvider.java02 0(`
+%3java.lang.Object"obr.com.guimsmendes.dnasimians.dataprovider.repository.DnaRepository#count(Ljava/lang/String;)Ljava/lang/Object;*K
+I
+%0Cbr.com.guimsmendes.dnasimians.dataprovider.repository.DnaRepository*
+
+%2java.lang.String2count(Ljava/lang/String;)*
+11B><
+:br.com.guimsmendes.dnasimians.dataprovider.DnaDataProvider

@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: br.com.guimsmendes.dnasimians.integration.dataprovider.sqs.interceptor.SqsQueueInterceptorTest
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 28.726 s - in br.com.guimsmendes.dnasimians.integration.dataprovider.sqs.interceptor.SqsQueueInterceptorTest

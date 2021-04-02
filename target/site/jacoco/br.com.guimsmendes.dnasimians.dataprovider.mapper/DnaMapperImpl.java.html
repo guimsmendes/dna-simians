@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>DnaMapperImpl.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">dna-simians</a> &gt; <a href="index.source.html" class="el_package">br.com.guimsmendes.dnasimians.dataprovider.mapper</a> &gt; <span class="el_source">DnaMapperImpl.java</span></div><h1>DnaMapperImpl.java</h1><pre class="source lang-java linenums">package br.com.guimsmendes.dnasimians.dataprovider.mapper;
+
+import br.com.guimsmendes.dnasimians.dataprovider.model.DnaEntity;
+import br.com.guimsmendes.dnasimians.usecase.domain.DnaDomain;
+import java.time.LocalDate;
+import java.util.UUID;
+import javax.annotation.Generated;
+import org.springframework.stereotype.Component;
+
+@Generated(
+    value = &quot;org.mapstruct.ap.MappingProcessor&quot;,
+    date = &quot;2021-04-01T21:48:24-0300&quot;,
+    comments = &quot;version: 1.4.0.Beta3, compiler: javac, environment: Java 11.0.10 (Ubuntu)&quot;
+)
+@Component
+<span class="fc" id="L16">public class DnaMapperImpl implements DnaMapper {</span>
+
+    @Override
+    public DnaEntity toDnaEntity(DnaDomain dnaDomain) {
+<span class="fc bfc" id="L20" title="All 2 branches covered.">        if ( dnaDomain == null ) {</span>
+<span class="fc" id="L21">            return null;</span>
+        }
+
+<span class="fc" id="L24">        String dnaType = null;</span>
+<span class="fc" id="L25">        String dnaSequence = null;</span>
+
+<span class="pc bpc" id="L27" title="1 of 2 branches missed.">        if ( dnaDomain.getDnaType() != null ) {</span>
+<span class="fc" id="L28">            dnaType = dnaDomain.getDnaType().name();</span>
+        }
+<span class="fc" id="L30">        dnaSequence = map( dnaDomain.getDnaSequence() );</span>
+
+<span class="fc" id="L32">        String dnaId = String.valueOf(UUID.randomUUID());</span>
+<span class="fc" id="L33">        LocalDate transactionDate = LocalDate.now();</span>
+
+<span class="fc" id="L35">        DnaEntity dnaEntity = new DnaEntity( dnaId, dnaType, dnaSequence, transactionDate );</span>
+
+<span class="fc" id="L37">        return dnaEntity;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.5.201910111838</span></div></body></html>

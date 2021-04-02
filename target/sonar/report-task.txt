@@ -1,0 +1,7 @@
+organization=guimsmendes
+projectKey=guimsmendes_dna-simians
+serverUrl=https://sonarcloud.io
+serverVersion=8.0.0.18862
+dashboardUrl=https://sonarcloud.io/dashboard?id=guimsmendes_dna-simians
+ceTaskId=AXiQD7WoHAIdOWkmevYT
+ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AXiQD7WoHAIdOWkmevYT

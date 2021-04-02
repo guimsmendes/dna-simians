@@ -1,0 +1,12 @@
+br/com/guimsmendes/dnasimians/acceptance/SimianCucumberRunner.class
+br/com/guimsmendes/dnasimians/unit/dataprovider/DnaDataProviderTest.class
+br/com/guimsmendes/dnasimians/unit/dataprovider/mapper/DnaMapperTest.class
+br/com/guimsmendes/dnasimians/unit/entrypoint/controller/SimianControllerTest.class
+br/com/guimsmendes/dnasimians/integration/dataprovider/repository/DnaRepositoryTest.class
+br/com/guimsmendes/dnasimians/integration/IntegrationTest.class
+br/com/guimsmendes/dnasimians/unit/entrypoint/mapper/StatsMapperTest.class
+br/com/guimsmendes/dnasimians/unit/usecase/DnaUseCaseTest.class
+br/com/guimsmendes/dnasimians/acceptance/steps/SimianSteps.class
+br/com/guimsmendes/dnasimians/integration/entrypoint/controller/SimianControllerIntegrationTest.class
+br/com/guimsmendes/dnasimians/integration/dataprovider/sqs/interceptor/SqsQueueInterceptorTest.class
+br/com/guimsmendes/dnasimians/unit/usecase/NitrogenBaseUseCaseTest.class

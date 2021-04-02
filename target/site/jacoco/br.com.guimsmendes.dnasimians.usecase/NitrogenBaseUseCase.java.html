@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>NitrogenBaseUseCase.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">dna-simians</a> &gt; <a href="index.source.html" class="el_package">br.com.guimsmendes.dnasimians.usecase</a> &gt; <span class="el_source">NitrogenBaseUseCase.java</span></div><h1>NitrogenBaseUseCase.java</h1><pre class="source lang-java linenums">package br.com.guimsmendes.dnasimians.usecase;
+
+import br.com.guimsmendes.dnasimians.usecase.domain.NitrogenBaseDomain;
+import br.com.guimsmendes.dnasimians.usecase.domain.enums.DnaType;
+import br.com.guimsmendes.dnasimians.usecase.exception.UseCaseException;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Component;
+
+import java.util.List;
+
+@Component
+<span class="fc" id="L13">public class NitrogenBaseUseCase {</span>
+
+<span class="fc" id="L15">    private static final Logger LOGGER = LoggerFactory.getLogger(NitrogenBaseUseCase.class);</span>
+
+    public DnaType checkDnaType(List&lt;List&lt;Character&gt;&gt; dnaSequence) {
+<span class="fc" id="L18">        LOGGER.info(&quot;Dna Type check is being processed...&quot;);</span>
+<span class="fc" id="L19">        NitrogenBaseDomain nitroBaseDomain = new NitrogenBaseDomain(dnaSequence);</span>
+        try {
+<span class="fc bfc" id="L21" title="All 2 branches covered.">            for (List&lt;Character&gt; dnaColumn : dnaSequence) {</span>
+<span class="fc bfc" id="L22" title="All 2 branches covered.">                for (Character dnaChar : dnaColumn) {</span>
+<span class="fc" id="L23">                    nitroBaseDomain.setNitrogenBase(dnaChar);</span>
+<span class="fc bfc" id="L24" title="All 2 branches covered.">                    if (this.checkNitrogenBases(nitroBaseDomain)) {</span>
+<span class="fc" id="L25">                        return DnaType.SIMIAN;</span>
+                    }
+<span class="fc" id="L27">                    nitroBaseDomain.addRow();</span>
+<span class="fc" id="L28">                }</span>
+<span class="fc" id="L29">                nitroBaseDomain.addColumn();</span>
+<span class="fc" id="L30">            }</span>
+<span class="fc" id="L31">            return DnaType.HUMAN;</span>
+<span class="fc" id="L32">        } catch (Exception e) {</span>
+<span class="fc" id="L33">            throw new UseCaseException.InputOutOfBounds(&quot;The input has to respect the NxN size square table.&quot;);</span>
+        }
+
+    }
+
+    private boolean checkNitrogenBases(NitrogenBaseDomain nitroBaseDomain) {
+
+<span class="fc" id="L40">        return countNitrogenBases(nitroBaseDomain, -1, 0) + 1 +</span>
+<span class="fc bfc" id="L41" title="All 2 branches covered.">                countNitrogenBases(nitroBaseDomain, 1, 0) &gt;= 4</span>
+<span class="fc" id="L42">                || countNitrogenBases(nitroBaseDomain, 0, -1) + 1 +</span>
+<span class="fc bfc" id="L43" title="All 2 branches covered.">                countNitrogenBases(nitroBaseDomain, 0, 1) &gt;= 4</span>
+<span class="fc" id="L44">                || countNitrogenBases(nitroBaseDomain, -1, -1) + 1 +</span>
+<span class="fc bfc" id="L45" title="All 2 branches covered.">                countNitrogenBases(nitroBaseDomain, 1, 1) &gt;= 4</span>
+<span class="fc" id="L46">                || countNitrogenBases(nitroBaseDomain, -1, 1) + 1 +</span>
+<span class="fc bfc" id="L47" title="All 2 branches covered.">                countNitrogenBases(nitroBaseDomain, 1, -1) &gt;= 4;</span>
+
+
+    }
+
+
+    private int countNitrogenBases(NitrogenBaseDomain nitroBaseDomain, int directionColumn, int directionRow) {
+<span class="fc" id="L54">        int count = 0;</span>
+<span class="fc" id="L55">        int column = nitroBaseDomain.getCurrentColumn() + directionColumn;</span>
+<span class="fc" id="L56">        int row = nitroBaseDomain.getCurrentRow() + directionRow;</span>
+<span class="fc bfc" id="L57" title="All 8 branches covered.">        while (column &gt;= 0 &amp;&amp; column &lt; nitroBaseDomain.getNumberOfColumns() &amp;&amp; row &gt;= 0 &amp;&amp; row &lt; nitroBaseDomain.getNumberOfRows() &amp;&amp;</span>
+<span class="fc bfc" id="L58" title="All 2 branches covered.">                nitroBaseDomain.getDnaSequence().get(column).get(row) == nitroBaseDomain.getNitrogenBase()) {</span>
+<span class="fc" id="L59">            count++;</span>
+<span class="fc" id="L60">            column += directionColumn;</span>
+<span class="fc" id="L61">            row += directionRow;</span>
+        }
+<span class="fc" id="L63">        return count;</span>
+    }
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.5.201910111838</span></div></body></html>

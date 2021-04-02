@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: br.com.guimsmendes.dnasimians.unit.usecase.DnaUseCaseTest
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.183 s - in br.com.guimsmendes.dnasimians.unit.usecase.DnaUseCaseTest
