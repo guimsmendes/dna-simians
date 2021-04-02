@@ -29,4 +29,7 @@ hs_err_pid*
 HELP.md
 mvnw.*
 *.iml
-target/
+target
+target/*
+.settings/*
+.settings
