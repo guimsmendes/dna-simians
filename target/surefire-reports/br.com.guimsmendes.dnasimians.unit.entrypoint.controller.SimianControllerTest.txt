@@ -1,4 +1,0 @@
--------------------------------------------------------------------------------
-Test set: br.com.guimsmendes.dnasimians.unit.entrypoint.controller.SimianControllerTest
--------------------------------------------------------------------------------
-Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.89 s - in br.com.guimsmendes.dnasimians.unit.entrypoint.controller.SimianControllerTest

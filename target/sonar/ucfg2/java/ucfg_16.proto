@@ -1,36 +1,0 @@
-
-sbr.com.guimsmendes.dnasimians.usecase.DnaUseCase#getStats()Lbr/com/guimsmendes/dnasimians/usecase/domain/DnaDomain;p
-f/home/mendes/Documents/dna-simians/src/main/java/br/com/guimsmendes/dnasimians/usecase/DnaUseCase.java& &("1*ã
-1p
-f/home/mendes/Documents/dna-simians/src/main/java/br/com/guimsmendes/dnasimians/usecase/DnaUseCase.java' '(
-þ
-p
-f/home/mendes/Documents/dna-simians/src/main/java/br/com/guimsmendes/dnasimians/usecase/DnaUseCase.java' '(>
-%08br.com.guimsmendes.dnasimians.usecase.gateway.DnaGateway"__id*D*B2
-0br.com.guimsmendes.dnasimians.usecase.DnaUseCase"
-
-dnaGateway¶³
-p
-f/home/mendes/Documents/dna-simians/src/main/java/br/com/guimsmendes/dnasimians/usecase/DnaUseCase.java' '($
-%1java.util.Optional"Wbr.com.guimsmendes.dnasimians.usecase.gateway.DnaGateway#getStats()Ljava/util/Optional;*@
->
-%08br.com.guimsmendes.dnasimians.usecase.gateway.DnaGateway2
-getStats()¢Ÿ
-p
-f/home/mendes/Documents/dna-simians/src/main/java/br/com/guimsmendes/dnasimians/usecase/DnaUseCase.java' *(
-
-%2java.util.Optional"Ijava.util.Optional#map(Ljava/util/function/Function;)Ljava/util/Optional;*
-
-%1java.util.Optional*
-""2"map(Ljava/util/function/Function;)ÔÑ
-p
-f/home/mendes/Documents/dna-simians/src/main/java/br/com/guimsmendes/dnasimians/usecase/DnaUseCase.java' *(f<
-%36br.com.guimsmendes.dnasimians.usecase.domain.DnaDomain"Ojava.util.Optional#orElseThrow(Ljava/util/function/Supplier;)Ljava/lang/Object;*
-
-%2java.util.Optional*
-""2*orElseThrow(Ljava/util/function/Supplier;)"²
-p
-f/home/mendes/Documents/dna-simians/src/main/java/br/com/guimsmendes/dnasimians/usecase/DnaUseCase.java' *(g>
-<
-%36br.com.guimsmendes.dnasimians.usecase.domain.DnaDomainB42
-0br.com.guimsmendes.dnasimians.usecase.DnaUseCase
