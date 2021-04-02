@@ -25,6 +25,10 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
+        env:
+            RDS_PASSWORD: ${{ secrets.RDS_PASSWORD }}
+            AWS_ACCES_KEY: ${{ secrets.AWS_ACCES_KEY }}
+            AWS_SECRET_KEY: ${{ secrets.AWS_SECRET_KEY }}
 
       - name: Run tests
         env:
