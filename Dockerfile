@@ -1,7 +1,7 @@
 from openjdk:8u275
 
 ARG AWS_ACCESS_KEY
-ARG AWS_SECRET_KEY
+# ARG AWS_SECRET_KEY
 ARG RDS_PASSWORD
 
 copy . /dna-simians
