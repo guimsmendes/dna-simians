@@ -22,8 +22,8 @@ public class DataProviderException extends RuntimeException {
 			 */
 			private static final long serialVersionUID = -3286674972659720817L;
 
-			public UnableToSaveRecord(String s, String correlationId) {
-                super(s + correlationId);
+			public UnableToSaveRecord(String s) {
+                super(s);
             }
         }
     public static class RepositoryException extends RuntimeException{

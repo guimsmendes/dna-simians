@@ -37,10 +37,10 @@ public class SimianRequest {
         return dnaDomain;
     }
     
-    private List<String> convertArrayToString(String array[]){
+    private List<String> convertArrayToString(String[] array){
     	List<String> dnaList = new ArrayList<>();
     	for(String s : array) {
-    		dnaList.add(s.replaceAll(" ", ""));
+    		dnaList.add(s.replace(" ", ""));
     	}
     	return dnaList;
     }

@@ -25,6 +25,7 @@ public class DnaUseCase {
 
     public boolean isSimian(DnaDomain dnaDomain) {
         dnaDomain.setDnaType(nitrogenBaseUseCase.checkDnaType(dnaDomain.getDnaSequence()));
+        LOGGER.info("Dna validation returned as {} type. Posting Dna Sequence on the database.", dnaDomain.getDnaType());
         try {
             dnaGateway.postDnaSequence(dnaDomain);
         }

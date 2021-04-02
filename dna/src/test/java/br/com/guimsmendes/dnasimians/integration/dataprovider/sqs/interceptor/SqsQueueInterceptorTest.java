@@ -1,10 +1,10 @@
-package br.com.guimsmendes.dnasimians.integration.dataprovider.sqs.sender;
+package br.com.guimsmendes.dnasimians.integration.dataprovider.sqs.interceptor;
 
 import br.com.guimsmendes.dnasimians.dataprovider.exception.DataProviderException;
-import br.com.guimsmendes.dnasimians.dataprovider.sqs.sender.SqsQueueSender;
+import br.com.guimsmendes.dnasimians.dataprovider.sqs.interceptor.SqsQueueInterceptor;
 import br.com.guimsmendes.dnasimians.usecase.domain.DnaDomain;
 import br.com.guimsmendes.dnasimians.usecase.domain.enums.DnaType;
-import io.awspring.cloud.messaging.core.QueueMessagingTemplate;
+
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,29 +17,25 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.*;
 
 @SpringBootTest
-class SqsQueueSenderTest {
+class SqsQueueInterceptorTest {
 
     @Autowired
-    private SqsQueueSender sqsQueueSender;
+    private SqsQueueInterceptor sqsQueueInterceptor;
 
     @Value("${cloud.aws.sqs.endpoint}")
     private String sqsEndPoint;
 
-    @Autowired
-    private QueueMessagingTemplate queueMessagingTemplate;
-
     @Test
     void sendMessage() {
-        sqsQueueSender.send(mockDnaDomain());
-        DnaDomain dnaDomain = this.queueMessagingTemplate.receiveAndConvert(sqsEndPoint, DnaDomain.class);
-        assertEquals(DnaType.SIMIAN, dnaDomain.getDnaType());
+        assertFalse(sqsQueueInterceptor.send(mockDnaDomain()).get().isEmpty());
     }
 
     @Test
     void sqsSenderException(){
         Assertions.assertThrows(DataProviderException.SqsSenderException.class,
-                () -> sqsQueueSender.send(null));
+                () -> sqsQueueInterceptor.send(null));
     }
+    
 
     private DnaDomain mockDnaDomain(){
         List<Character> dnaList = new ArrayList<>();
@@ -55,4 +51,5 @@ class SqsQueueSenderTest {
         dnaDomain.setDnaType(DnaType.SIMIAN);
         return dnaDomain;
     }
+
 }

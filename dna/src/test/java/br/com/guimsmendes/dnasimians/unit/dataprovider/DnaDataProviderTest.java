@@ -13,7 +13,6 @@ import org.mockito.junit.jupiter.MockitoExtension;
 
 import java.math.BigInteger;
 import java.util.Optional;
-import java.util.UUID;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.ArgumentMatchers.any;
@@ -41,7 +40,7 @@ class DnaDataProviderTest {
     @Test
     void unableToConnectDatabase() {
         when(dnaRepository.count(any(String.class))).thenThrow(new DataProviderException
-                .UnableToSaveRecord("Unable to connect.", UUID.randomUUID().toString()));
+                .UnableToSaveRecord("Unable to connect."));
 
         Optional<DnaDomain> dnaDomain = dnaDataProvider.getStats();
         assertEquals(Optional.empty(), dnaDomain);
