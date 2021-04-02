@@ -27,6 +27,10 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Run tests
+        env:
+            RDS_PASSWORD: ${{ secrets.RDS_PASSWORD }}
+            AWS_ACCES_KEY: ${{ secrets.AWS_ACCES_KEY }}
+            AWS_SECRET_KEY: ${{ secrets.AWS_SECRET_KEY }}
         run: |
           if [ -f docker-compose.test.yml ]; then
             docker-compose --file docker-compose.test.yml build
@@ -34,12 +38,6 @@ jobs:
           else
             docker build . --file Dockerfile
           fi
-        env:
-            RDS_PASSWORD: ${{ secrets.RDS_PASSWORD }}
-            AWS_ACCES_KEY: ${{ secrets.AWS_ACCES_KEY }}
-            AWS_SECRET_KEY: ${{ secrets.AWS_SECRET_KEY }}
-
-
 
   # Push image to GitHub Packages.
   # See also https://docs.docker.com/docker-hub/builds/
@@ -54,20 +52,25 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Build image
-        run: docker build . --file Dockerfile --tag $IMAGE_NAME
         env:
             RDS_PASSWORD: ${{ secrets.RDS_PASSWORD }}
             AWS_ACCES_KEY: ${{ secrets.AWS_ACCES_KEY }}
             AWS_SECRET_KEY: ${{ secrets.AWS_SECRET_KEY }}
+        run: docker build . --file Dockerfile --tag $IMAGE_NAME
+
 
       - name: Log into registry
-        run: echo "${{ secrets.GITHUB_TOKEN }}" | docker login docker.pkg.github.com -u ${{ github.actor }} --password-stdin
         env:
             RDS_PASSWORD: ${{ secrets.RDS_PASSWORD }}
             AWS_ACCES_KEY: ${{ secrets.AWS_ACCES_KEY }}
             AWS_SECRET_KEY: ${{ secrets.AWS_SECRET_KEY }}
+        run: echo "${{ secrets.GITHUB_TOKEN }}" | docker login docker.pkg.github.com -u ${{ github.actor }} --password-stdin
 
       - name: Push image
+        env:
+            RDS_PASSWORD: ${{ secrets.RDS_PASSWORD }}
+            AWS_ACCES_KEY: ${{ secrets.AWS_ACCES_KEY }}
+            AWS_SECRET_KEY: ${{ secrets.AWS_SECRET_KEY }}
         run: |
           IMAGE_ID=docker.pkg.github.com/${{ github.repository }}/$IMAGE_NAME
 
@@ -88,7 +91,3 @@ jobs:
 
           docker tag $IMAGE_NAME $IMAGE_ID:$VERSION
           docker push $IMAGE_ID:$VERSION
-        env:
-            RDS_PASSWORD: ${{ secrets.RDS_PASSWORD }}
-            AWS_ACCES_KEY: ${{ secrets.AWS_ACCES_KEY }}
-            AWS_SECRET_KEY: ${{ secrets.AWS_SECRET_KEY }}
