@@ -1,64 +1,64 @@
 
-tbr.com.guimsmendes.dnasimians.usecase.DnaUseCase#isSimian(Lbr/com/guimsmendes/dnasimians/usecase/domain/DnaDomain;)Zt
-j/home/mendes/Documents/dna-simians/dna/src/main/java/br/com/guimsmendes/dnasimians/usecase/DnaUseCase.java ("5*è
-4t
-j/home/mendes/Documents/dna-simians/dna/src/main/java/br/com/guimsmendes/dnasimians/usecase/DnaUseCase.java (…
-‚
-t
-j/home/mendes/Documents/dna-simians/dna/src/main/java/br/com/guimsmendes/dnasimians/usecase/DnaUseCase.java (>
+tbr.com.guimsmendes.dnasimians.usecase.DnaUseCase#isSimian(Lbr/com/guimsmendes/dnasimians/usecase/domain/DnaDomain;)Zp
+f/home/mendes/Documents/dna-simians/src/main/java/br/com/guimsmendes/dnasimians/usecase/DnaUseCase.java ("5*Ü
+4p
+f/home/mendes/Documents/dna-simians/src/main/java/br/com/guimsmendes/dnasimians/usecase/DnaUseCase.java (
+ş
+p
+f/home/mendes/Documents/dna-simians/src/main/java/br/com/guimsmendes/dnasimians/usecase/DnaUseCase.java (>
 %78br.com.guimsmendes.dnasimians.usecase.gateway.DnaGateway"__id*D*B2
 0br.com.guimsmendes.dnasimians.usecase.DnaUseCase"
 
-dnaGatewayßÜ
-t
-j/home/mendes/Documents/dna-simians/dna/src/main/java/br/com/guimsmendes/dnasimians/usecase/DnaUseCase.java (1
+dnaGatewayÛØ
+p
+f/home/mendes/Documents/dna-simians/src/main/java/br/com/guimsmendes/dnasimians/usecase/DnaUseCase.java (1
 
 %8void"ƒbr.com.guimsmendes.dnasimians.usecase.gateway.DnaGateway#postDnaSequence(Lbr/com/guimsmendes/dnasimians/usecase/domain/DnaDomain;)V*@
 >
 %78br.com.guimsmendes.dnasimians.usecase.gateway.DnaGateway*E
 C
 	dnaDomain6br.com.guimsmendes.dnasimians.usecase.domain.DnaDomain2IpostDnaSequence(Lbr/com/guimsmendes/dnasimians/usecase/domain/DnaDomain;)*
-1*Ù
-5t
-j/home/mendes/Documents/dna-simians/dna/src/main/java/br/com/guimsmendes/dnasimians/usecase/DnaUseCase.java (
-Œ
-t
-j/home/mendes/Documents/dna-simians/dna/src/main/java/br/com/guimsmendes/dnasimians/usecase/DnaUseCase.java (0?
+1*¹
+5p
+f/home/mendes/Documents/dna-simians/src/main/java/br/com/guimsmendes/dnasimians/usecase/DnaUseCase.java (‹
+ˆ
+p
+f/home/mendes/Documents/dna-simians/src/main/java/br/com/guimsmendes/dnasimians/usecase/DnaUseCase.java (0?
 %09br.com.guimsmendes.dnasimians.usecase.NitrogenBaseUseCase"__id*M*K2
 0br.com.guimsmendes.dnasimians.usecase.DnaUseCase"
-nitrogenBaseUseCaseÁ¾
-t
-j/home/mendes/Documents/dna-simians/dna/src/main/java/br/com/guimsmendes/dnasimians/usecase/DnaUseCase.java> (X
+nitrogenBaseUseCase½º
+p
+f/home/mendes/Documents/dna-simians/src/main/java/br/com/guimsmendes/dnasimians/usecase/DnaUseCase.java> (X
 %1java.util.List"Wbr.com.guimsmendes.dnasimians.usecase.domain.DnaDomain#getDnaSequence()Ljava/util/List;*E
 C
-	dnaDomain6br.com.guimsmendes.dnasimians.usecase.domain.DnaDomain2getDnaSequence()ÍÊ
-t
-j/home/mendes/Documents/dna-simians/dna/src/main/java/br/com/guimsmendes/dnasimians/usecase/DnaUseCase.java (Y@
+	dnaDomain6br.com.guimsmendes.dnasimians.usecase.domain.DnaDomain2getDnaSequence()ÉÆ
+p
+f/home/mendes/Documents/dna-simians/src/main/java/br/com/guimsmendes/dnasimians/usecase/DnaUseCase.java (Y@
 %2:br.com.guimsmendes.dnasimians.usecase.domain.enums.DnaType"”br.com.guimsmendes.dnasimians.usecase.NitrogenBaseUseCase#checkDnaType(Ljava/util/List;)Lbr/com/guimsmendes/dnasimians/usecase/domain/enums/DnaType;*A
 ?
 %09br.com.guimsmendes.dnasimians.usecase.NitrogenBaseUseCase*
 
-%1java.util.List2checkDnaType(Ljava/util/List;)İÚ
-t
-j/home/mendes/Documents/dna-simians/dna/src/main/java/br/com/guimsmendes/dnasimians/usecase/DnaUseCase.java (Z
+%1java.util.List2checkDnaType(Ljava/util/List;)ÙÖ
+p
+f/home/mendes/Documents/dna-simians/src/main/java/br/com/guimsmendes/dnasimians/usecase/DnaUseCase.java (Z
 
 %3void"€br.com.guimsmendes.dnasimians.usecase.domain.DnaDomain#setDnaType(Lbr/com/guimsmendes/dnasimians/usecase/domain/enums/DnaType;)V*E
 C
 	dnaDomain6br.com.guimsmendes.dnasimians.usecase.domain.DnaDomain*B
 @
-%2:br.com.guimsmendes.dnasimians.usecase.domain.enums.DnaType2HsetDnaType(Lbr/com/guimsmendes/dnasimians/usecase/domain/enums/DnaType;)Ÿ
-œ
-t
-j/home/mendes/Documents/dna-simians/dna/src/main/java/br/com/guimsmendes/dnasimians/usecase/DnaUseCase.java (
+%2:br.com.guimsmendes.dnasimians.usecase.domain.enums.DnaType2HsetDnaType(Lbr/com/guimsmendes/dnasimians/usecase/domain/enums/DnaType;)›
+˜
+p
+f/home/mendes/Documents/dna-simians/src/main/java/br/com/guimsmendes/dnasimians/usecase/DnaUseCase.java (
 %4org.slf4j.Logger"__id*
-""‘
-t
-j/home/mendes/Documents/dna-simians/dna/src/main/java/br/com/guimsmendes/dnasimians/usecase/DnaUseCase.javaa (w@
+""Š
+p
+f/home/mendes/Documents/dna-simians/src/main/java/br/com/guimsmendes/dnasimians/usecase/DnaUseCase.javaa (w@
 %5:br.com.guimsmendes.dnasimians.usecase.domain.enums.DnaType"br.com.guimsmendes.dnasimians.usecase.domain.DnaDomain#getDnaType()Lbr/com/guimsmendes/dnasimians/usecase/domain/enums/DnaType;*E
 C
-	dnaDomain6br.com.guimsmendes.dnasimians.usecase.domain.DnaDomain2getDnaType()œ™
-t
-j/home/mendes/Documents/dna-simians/dna/src/main/java/br/com/guimsmendes/dnasimians/usecase/DnaUseCase.java (x
+	dnaDomain6br.com.guimsmendes.dnasimians.usecase.domain.DnaDomain2getDnaType()˜•
+p
+f/home/mendes/Documents/dna-simians/src/main/java/br/com/guimsmendes/dnasimians/usecase/DnaUseCase.java (x
 
 %6void"<org.slf4j.Logger#info(Ljava/lang/String;Ljava/lang/Object;)V*
 
@@ -66,28 +66,28 @@ j/home/mendes/Documents/dna-simians/dna/src/main/java/br/com/guimsmendes/dnasimi
 IDna validation returned as {} type. Posting Dna Sequence on the database.*B
 @
 %5:br.com.guimsmendes.dnasimians.usecase.domain.enums.DnaType2*info(Ljava/lang/String;Ljava/lang/Object;)*
-4*¹	
-1t
-j/home/mendes/Documents/dna-simians/dna/src/main/java/br/com/guimsmendes/dnasimians/usecase/DnaUseCase.java# #(’
-t
-j/home/mendes/Documents/dna-simians/dna/src/main/java/br/com/guimsmendes/dnasimians/usecase/DnaUseCase.java# #(%A
+4*¥	
+1p
+f/home/mendes/Documents/dna-simians/src/main/java/br/com/guimsmendes/dnasimians/usecase/DnaUseCase.java# #(‹
+p
+f/home/mendes/Documents/dna-simians/src/main/java/br/com/guimsmendes/dnasimians/usecase/DnaUseCase.java# #(%A
 %12:br.com.guimsmendes.dnasimians.usecase.domain.enums.DnaType"br.com.guimsmendes.dnasimians.usecase.domain.DnaDomain#getDnaType()Lbr/com/guimsmendes/dnasimians/usecase/domain/enums/DnaType;*E
 C
-	dnaDomain6br.com.guimsmendes.dnasimians.usecase.domain.DnaDomain2getDnaType()Ê
-Ç
-t
-j/home/mendes/Documents/dna-simians/dna/src/main/java/br/com/guimsmendes/dnasimians/usecase/DnaUseCase.java#- #(;A
+	dnaDomain6br.com.guimsmendes.dnasimians.usecase.domain.DnaDomain2getDnaType()Æ
+Ã
+p
+f/home/mendes/Documents/dna-simians/src/main/java/br/com/guimsmendes/dnasimians/usecase/DnaUseCase.java#- #(;A
 %13:br.com.guimsmendes.dnasimians.usecase.domain.enums.DnaType"__id*
-""ÛØ
-t
-j/home/mendes/Documents/dna-simians/dna/src/main/java/br/com/guimsmendes/dnasimians/usecase/DnaUseCase.java# #(<
+""×Ô
+p
+f/home/mendes/Documents/dna-simians/src/main/java/br/com/guimsmendes/dnasimians/usecase/DnaUseCase.java# #(<
 %14boolean"*java.lang.Enum#equals(Ljava/lang/Object;)Z*C
 A
 %12:br.com.guimsmendes.dnasimians.usecase.domain.enums.DnaType*C
 A
-%13:br.com.guimsmendes.dnasimians.usecase.domain.enums.DnaType2equals(Ljava/lang/Object;)"~
-t
-j/home/mendes/Documents/dna-simians/dna/src/main/java/br/com/guimsmendes/dnasimians/usecase/DnaUseCase.java# #(=
+%13:br.com.guimsmendes.dnasimians.usecase.domain.enums.DnaType2equals(Ljava/lang/Object;)"z
+p
+f/home/mendes/Documents/dna-simians/src/main/java/br/com/guimsmendes/dnasimians/usecase/DnaUseCase.java# #(=
 "":C
 	dnaDomain6br.com.guimsmendes.dnasimians.usecase.domain.DnaDomainB42
 0br.com.guimsmendes.dnasimians.usecase.DnaUseCase

@@ -1,74 +1,74 @@
 
-Šbr.com.guimsmendes.dnasimians.entrypoint.model.request.SimianRequest#asDnaDomain()Lbr/com/guimsmendes/dnasimians/usecase/domain/DnaDomain;ˆ
-~/home/mendes/Documents/dna-simians/dna/src/main/java/br/com/guimsmendes/dnasimians/entrypoint/model/request/SimianRequest.java ( "1*†
-1ˆ
-~/home/mendes/Documents/dna-simians/dna/src/main/java/br/com/guimsmendes/dnasimians/entrypoint/model/request/SimianRequest.java (/
-ş
-ˆ
-~/home/mendes/Documents/dna-simians/dna/src/main/java/br/com/guimsmendes/dnasimians/entrypoint/model/request/SimianRequest.java0 (3
+Šbr.com.guimsmendes.dnasimians.entrypoint.model.request.SimianRequest#asDnaDomain()Lbr/com/guimsmendes/dnasimians/usecase/domain/DnaDomain;„
+z/home/mendes/Documents/dna-simians/src/main/java/br/com/guimsmendes/dnasimians/entrypoint/model/request/SimianRequest.java ( "1*Ò
+1„
+z/home/mendes/Documents/dna-simians/src/main/java/br/com/guimsmendes/dnasimians/entrypoint/model/request/SimianRequest.java (/ı
+ú
+„
+z/home/mendes/Documents/dna-simians/src/main/java/br/com/guimsmendes/dnasimians/entrypoint/model/request/SimianRequest.java0 (3
 %0java.lang.String[]"__id*Q*OF
 Dbr.com.guimsmendes.dnasimians.entrypoint.model.request.SimianRequest"
-dnaŠ
-‡
-ˆ
-~/home/mendes/Documents/dna-simians/dna/src/main/java/br/com/guimsmendes/dnasimians/entrypoint/model/request/SimianRequest.java (4
+dna†
+ƒ
+„
+z/home/mendes/Documents/dna-simians/src/main/java/br/com/guimsmendes/dnasimians/entrypoint/model/request/SimianRequest.java (4
 %1java.util.List"~br.com.guimsmendes.dnasimians.entrypoint.model.request.SimianRequest#convertArrayToString([Ljava/lang/String;)Ljava/util/List;*HF
 Dbr.com.guimsmendes.dnasimians.entrypoint.model.request.SimianRequest*
 
-%0java.lang.String[]Æ
-Ã
-ˆ
-~/home/mendes/Documents/dna-simians/dna/src/main/java/br/com/guimsmendes/dnasimians/entrypoint/model/request/SimianRequest.java (5
+%0java.lang.String[]Â
+¿
+„
+z/home/mendes/Documents/dna-simians/src/main/java/br/com/guimsmendes/dnasimians/entrypoint/model/request/SimianRequest.java (5
 dnaRowjava.util.List"__id*
 
-%1java.util.List¾»
-ˆ
-~/home/mendes/Documents/dna-simians/dna/src/main/java/br/com/guimsmendes/dnasimians/entrypoint/model/request/SimianRequest.java0 (;
-%2java.util.ArrayList"java.util.ArrayListĞ
-Í
-ˆ
-~/home/mendes/Documents/dna-simians/dna/src/main/java/br/com/guimsmendes/dnasimians/entrypoint/model/request/SimianRequest.java, (=
+%1java.util.Listº·
+„
+z/home/mendes/Documents/dna-simians/src/main/java/br/com/guimsmendes/dnasimians/entrypoint/model/request/SimianRequest.java0 (;
+%2java.util.ArrayList"java.util.ArrayListÌ
+É
+„
+z/home/mendes/Documents/dna-simians/src/main/java/br/com/guimsmendes/dnasimians/entrypoint/model/request/SimianRequest.java, (=
 %3"java.util.ArrayList#<init>()V*
 
-%2java.util.ArrayListĞ
-Í
-ˆ
-~/home/mendes/Documents/dna-simians/dna/src/main/java/br/com/guimsmendes/dnasimians/entrypoint/model/request/SimianRequest.java (>
+%2java.util.ArrayListÌ
+É
+„
+z/home/mendes/Documents/dna-simians/src/main/java/br/com/guimsmendes/dnasimians/entrypoint/model/request/SimianRequest.java (>
 dnaSequencejava.util.List"__id*
 
-%2java.util.ArrayList¢Ÿ
-ˆ
-~/home/mendes/Documents/dna-simians/dna/src/main/java/br/com/guimsmendes/dnasimians/entrypoint/model/request/SimianRequest.java "(	
+%2java.util.ArrayList›
+„
+z/home/mendes/Documents/dna-simians/src/main/java/br/com/guimsmendes/dnasimians/entrypoint/model/request/SimianRequest.java "(	
 
 %4void":java.lang.Iterable#forEach(Ljava/util/function/Consumer;)V*
 
 dnaRowjava.util.List*
-""2&forEach(Ljava/util/function/Consumer;)„
-ˆ
-~/home/mendes/Documents/dna-simians/dna/src/main/java/br/com/guimsmendes/dnasimians/entrypoint/model/request/SimianRequest.java#" #(+<
-%56br.com.guimsmendes.dnasimians.usecase.domain.DnaDomain"6br.com.guimsmendes.dnasimians.usecase.domain.DnaDomain–
-“
-ˆ
-~/home/mendes/Documents/dna-simians/dna/src/main/java/br/com/guimsmendes/dnasimians/entrypoint/model/request/SimianRequest.java# #(-
+""2&forEach(Ljava/util/function/Consumer;)€ı
+„
+z/home/mendes/Documents/dna-simians/src/main/java/br/com/guimsmendes/dnasimians/entrypoint/model/request/SimianRequest.java#" #(+<
+%56br.com.guimsmendes.dnasimians.usecase.domain.DnaDomain"6br.com.guimsmendes.dnasimians.usecase.domain.DnaDomain’
+
+„
+z/home/mendes/Documents/dna-simians/src/main/java/br/com/guimsmendes/dnasimians/entrypoint/model/request/SimianRequest.java# #(-
 %6"@br.com.guimsmendes.dnasimians.usecase.domain.DnaDomain#<init>()V*>
 <
-%56br.com.guimsmendes.dnasimians.usecase.domain.DnaDomain™
-–
-ˆ
-~/home/mendes/Documents/dna-simians/dna/src/main/java/br/com/guimsmendes/dnasimians/entrypoint/model/request/SimianRequest.java# #(.C
+%56br.com.guimsmendes.dnasimians.usecase.domain.DnaDomain•
+’
+„
+z/home/mendes/Documents/dna-simians/src/main/java/br/com/guimsmendes/dnasimians/entrypoint/model/request/SimianRequest.java# #(.C
 	dnaDomain6br.com.guimsmendes.dnasimians.usecase.domain.DnaDomain"__id*>
 <
-%56br.com.guimsmendes.dnasimians.usecase.domain.DnaDomainşû
-ˆ
-~/home/mendes/Documents/dna-simians/dna/src/main/java/br/com/guimsmendes/dnasimians/entrypoint/model/request/SimianRequest.java$ $(-
+%56br.com.guimsmendes.dnasimians.usecase.domain.DnaDomainú÷
+„
+z/home/mendes/Documents/dna-simians/src/main/java/br/com/guimsmendes/dnasimians/entrypoint/model/request/SimianRequest.java$ $(-
 
 %7void"Xbr.com.guimsmendes.dnasimians.usecase.domain.DnaDomain#setDnaSequence(Ljava/util/List;)V*E
 C
 	dnaDomain6br.com.guimsmendes.dnasimians.usecase.domain.DnaDomain*
 
-dnaSequencejava.util.List2 setDnaSequence(Ljava/util/List;)"Ò
-ˆ
-~/home/mendes/Documents/dna-simians/dna/src/main/java/br/com/guimsmendes/dnasimians/entrypoint/model/request/SimianRequest.java% %(E
+dnaSequencejava.util.List2 setDnaSequence(Ljava/util/List;)"Î
+„
+z/home/mendes/Documents/dna-simians/src/main/java/br/com/guimsmendes/dnasimians/entrypoint/model/request/SimianRequest.java% %(E
 C
 	dnaDomain6br.com.guimsmendes.dnasimians.usecase.domain.DnaDomainBHF
 Dbr.com.guimsmendes.dnasimians.entrypoint.model.request.SimianRequest
