@@ -276,8 +276,9 @@
 
 	<distributionManagement>
 		<repository>
-			<id>bintray-awspring</id>
-			<url>https://api.bintray.com/maven/awspring/releases/spring-cloud-aws/;publish=1</url>
+			<id>github</id>
+			<name>GitHub guimsmendes Apache Maven Packages</name>
+			<url>https://maven.pkg.github.com/guimsmendes/dna-simians</url>
 		</repository>
 	</distributionManagement>
 
