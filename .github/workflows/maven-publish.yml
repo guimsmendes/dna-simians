@@ -23,7 +23,11 @@ jobs:
 
     - name: Build with Maven
       
-      run: mvn -B package --file pom.xml
+      env:
+          AWS_ACCESS_KEY: ${{ secrets.AWS_ACCESS_KEY }} 
+          AWS_SECRET_KEY: ${{ secrets.AWS_SECRET_KEY }}
+          RDS_PASSWORD: ${{ secrets.RDS_PASSWORD }}
+      run: mvn -B package --file pom.xml --build-arg AWS_ACCESS_KEY=$AWS_ACCESS_KEY --build-arg AWS_SECRET_KEY=$AWS_SECRET_KEY --build-arg RDS_PASSWORD=$RDS_PASSWORD
 
     - name: Publish to GitHub Packages Apache Maven
       run: mvn deploy -s $GITHUB_WORKSPACE/settings.xml
