@@ -20,7 +20,7 @@
 ## Descrição
 
 Este projeto tem o objetivo de implantar uma aplicação **Dna Simians** utilizando como tecnologia principal Spring Boot e Clean Architecture para disponibilizar um recurso para validação de um determinado Dna recebido. 
-O Dna recebido como um se enquadra como um Dna humano ou símio. 
+O Dna recebido será validado de acordo com os caracteres que representam as bases nitrogenadas de um Dna, além de definir o tipo de Dna ao qual se enquadra,**humano** ou **símio.** 
 
 
 * A aplicação poderá ser utilizada com chamadas via **API**, via domínio implantado pela **AWS Elastic Compute Cloud** (**URL:** http://dna-simians-elb-390167918.us-east-2.elb.amazonaws.com/). Confira o passo a passo para se conectar com a API no tópico [Como rodar a aplicação: API](#api).
