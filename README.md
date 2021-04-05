@@ -57,7 +57,7 @@ Além dos recursos informados, a rota também contém um endpoint do **Swagger**
 
 #### Desenvolvimento: [<img src="https://img.shields.io/static/v1?label=spring&message=2.4.4&color=brightgreen&style=for-the-badge&logo=SPRING" width = 120>](https://spring.io/) [<img src="https://img.shields.io/static/v1?label=jdk&message=1.8.0_271&color=orange&style=for-the-badge&logo=JAVA" width = 125>](https://www.oracle.com/br/java/technologies/javase/javase-jdk8-downloads.html) [<img src="https://img.shields.io/static/v1?label=awspring cloud&message=2.3.0&color=orange&style=for-the-badge&logo=SPRING" width = 170>](https://docs.awspring.io/spring-cloud-aws/docs/current/reference/html/index.html#messaging) [<img src="https://img.shields.io/static/v1?label=lombok&message=1.18.18&color=red&style=for-the-badge&logo=" width = 115>](https://projectlombok.org/)
 
-#### Build/Packaging : [<img src="https://img.shields.io/static/v1?label=apache&message=maven&color=red&style=for-the-badge&logo=apache maven" width = 120>](https://maven.apache.org/)
+#### Build/Packaging : [<img src="https://img.shields.io/static/v1?label=apache&message=maven&color=red&style=for-the-badge&logo=" width = 120>](https://maven.apache.org/)
 
 #### Tests: [<img src="https://img.shields.io/static/v1?label=junit&message=5&color=green&style=for-the-badge&logo=" width = 70>](https://junit.org/junit5/) [<img src="https://img.shields.io/static/v1?label=mockito&message=1.10.19&color=green&style=for-the-badge&logo=" width = 125>](https://site.mockito.org/) [<img src="https://img.shields.io/static/v1?label=rest-assured&message=3.0.0&color=green&style=for-the-badge&logo=" width = 142>](https://rest-assured.io/) [<img src="https://img.shields.io/static/v1?label=cucumber&message=6.8.1&color=green&style=for-the-badge&logo=cucumber" width = 130>](https://cucumber.io/)
 
@@ -67,9 +67,9 @@ Além dos recursos informados, a rota também contém um endpoint do **Swagger**
 
 #### API Documentation: [<img src="https://img.shields.io/static/v1?label=swagger&message=3.0.0&color=brightgreen&style=for-the-badge&logo=swagger" width = 125>](http://dna-simians-elb-390167918.us-east-2.elb.amazonaws.com/swagger-ui/index.html)
 
-#### Deploy: [<img src="https://img.shields.io/static/v1?label=aws&message=EC2&color=orange&style=for-the-badge&logo=amazon aws" width = 80>](https://aws.amazon.com/pt/ec2/) [<img src="https://img.shields.io/static/v1?label=docker&message=action&color=blue&style=for-the-badge&logo=docker" width = 120>](https://aws.amazon.com/pt/elasticbeanstalk/)
+#### Deploy: [<img src="https://img.shields.io/static/v1?label=aws&message=EC2&color=orange&style=for-the-badge&logo=" width = 80>](https://aws.amazon.com/pt/ec2/) [<img src="https://img.shields.io/static/v1?label=docker&message=action&color=blue&style=for-the-badge&logo=docker" width = 120>](https://aws.amazon.com/pt/elasticbeanstalk/)
 
-#### Observability: [<img src="https://img.shields.io/static/v1?label=spring&message=actuator&color=brightgreen&style=for-the-badge&logo=SPRING" width = 130>](http://dna-simians-elb-390167918.us-east-2.elb.amazonaws.com/actuator) [<img src="https://img.shields.io/static/v1?label=aws&message=cloudwatch&color=brightgreen&style=for-the-badge&logo=amazon aws" width = 130>](https://aws.amazon.com/pt/cloudwatch/)
+#### Observability: [<img src="https://img.shields.io/static/v1?label=spring&message=actuator&color=brightgreen&style=for-the-badge&logo=SPRING" width = 130>](http://dna-simians-elb-390167918.us-east-2.elb.amazonaws.com/actuator) [<img src="https://img.shields.io/static/v1?label=aws&message=cloudwatch&color=brightgreen&style=for-the-badge&logo=" width = 130>](https://aws.amazon.com/pt/cloudwatch/)
 
 
 ## Como rodar a aplicação
