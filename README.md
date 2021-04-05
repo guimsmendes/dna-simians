@@ -34,9 +34,10 @@ A API irá expôr 2 endpoints a fim de realizar a **verificação**, **postagem*
 - **POST /simian** - recebe como RequestBody um array de String com as informações de registro de um determinado DNA (limitado aos caracteres referenciados para as bases nitrogenadas: **A, C, T e G.**
 Realiza a análise do Dna recebido para definir se é um Dna **Humano** ou **Símio** conforme modelo abaixo. Se possuir uma sequência **horizontal**, **vertical** ou **diagonal** de **4** ou mais bases nitrogenadas **iguais**, trata-se do Dna de um Símio: 
 <img src = "https://i.ibb.co/5TxKgjb/Screenshot-from-2021-04-04-19-17-20.png">
-Caso o DNA seja identificado como um símio, é retornado um **HTTP 200-OK**, caso
-contrário um **HTTP 403-FORBIDDEN**.
+Caso o DNA seja identificado como um símio, é retornado um **HTTP 200-OK** , caso
+contrário um **HTTP 403-FORBIDDEN.**
 Após a verificação, o registro é incluído no banco de dados da aplicação.
+
 
 - **GET /stats** - realiza uma busca no banco de dados registrado na aplicação retornando o **número** de Dna's registrados para **humanos**, **símios**, e a **relação** entre os dois conforme Response abaixo:
 > **{"count_mutant_dna": 40, "count_human_dna": 100: "ratio": 0.4}**
