@@ -81,6 +81,11 @@ Além dos recursos informados, a rota também contém um endpoint do **Swagger**
 	* > http://dna-simians-elb-390167918.us-east-2.elb.amazonaws.com/
 
 
+**Collection:**
+* Foi disponibilizada uma collection via Postman com exemplos de chamadas para casos de sucesso, tanto para Dna's humanos ou símios, e casos de erro:
+	* > https://www.getpostman.com/collections/972a90c052f90f84239f
+
+
 **Endpoints criados:**
 * `/actuator` - Retorna os endpoints com informações de saúde da aplicação
 * `/swagger-ui/index.html` - Retorna a documentação da API
