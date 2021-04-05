@@ -69,7 +69,7 @@ Além dos recursos informados, a rota também contém um endpoint do **Swagger**
 
 #### Deploy: [<img src="https://img.shields.io/static/v1?label=aws&message=EC2&color=orange&style=for-the-badge&logo=" width = 80>](https://aws.amazon.com/pt/ec2/) [<img src="https://img.shields.io/static/v1?label=docker&message=action&color=blue&style=for-the-badge&logo=docker" width = 120>](https://aws.amazon.com/pt/elasticbeanstalk/)
 
-#### Observability: [<img src="https://img.shields.io/static/v1?label=spring&message=actuator&color=brightgreen&style=for-the-badge&logo=SPRING" width = 130>](http://dna-simians-elb-390167918.us-east-2.elb.amazonaws.com/actuator) [<img src="https://img.shields.io/static/v1?label=aws&message=cloudwatch&color=brightgreen&style=for-the-badge&logo=" width = 130>](https://aws.amazon.com/pt/cloudwatch/)
+#### Observability: [<img src="https://img.shields.io/static/v1?label=spring&message=actuator&color=brightgreen&style=for-the-badge&logo=SPRING" width = 130>](http://dna-simians-elb-390167918.us-east-2.elb.amazonaws.com/actuator) [<img src="https://img.shields.io/static/v1?label=aws&message=cloudwatch&color=brightgreen&style=for-the-badge&logo=" width = 130>](https://cloudwatch.amazonaws.com/dashboard.html?dashboard=dnaSimians-dashboard&context=eyJSIjoidXMtZWFzdC0xIiwiRCI6ImN3LWRiLTc1MjIwMDU0MjM4NCIsIlUiOiJ1cy1lYXN0LTFfVXl1Q09rQWFIIiwiQyI6IjhxbGJqZWtkbm9hOHIyMjM0bXJxM3U1YWciLCJJIjoidXMtZWFzdC0xOjg5MTM3MjQ2LWY5YTktNGJiNi1hYTUyLTlkNjc5ZWVlYjFiNiIsIk8iOiJhcm46YXdzOmlhbTo6NzUyMjAwNTQyMzg0OnJvbGUvc2VydmljZS1yb2xlL0Nsb3VkV2F0Y2hEYXNoYm9hcmQtUHVibGljLVJlYWRPbmx5V2l0aExvZ3MtZG5hU2ltaWFucy0tRjJNNFY0TlQiLCJNIjoiUHVibGljIn0%3D)
 
 
 ## Como rodar a aplicação
@@ -108,7 +108,8 @@ Abaixo segue o modelo de dados deste banco de dados:
 
 ## Observability
 
-
+Para acompanhamento da utilização da CPU das instâncias EC2, RDS, envio e recebimento das mensagens do SQS e instâncias no ar para o grupo de AutoScaling, foi criado um dashboard no **[Cloudwatch](https://cloudwatch.amazonaws.com/dashboard.html?dashboard=dnaSimians-dashboard&context=eyJSIjoidXMtZWFzdC0xIiwiRCI6ImN3LWRiLTc1MjIwMDU0MjM4NCIsIlUiOiJ1cy1lYXN0LTFfVXl1Q09rQWFIIiwiQyI6IjhxbGJqZWtkbm9hOHIyMjM0bXJxM3U1YWciLCJJIjoidXMtZWFzdC0xOjg5MTM3MjQ2LWY5YTktNGJiNi1hYTUyLTlkNjc5ZWVlYjFiNiIsIk8iOiJhcm46YXdzOmlhbTo6NzUyMjAwNTQyMzg0OnJvbGUvc2VydmljZS1yb2xlL0Nsb3VkV2F0Y2hEYXNoYm9hcmQtUHVibGljLVJlYWRPbmx5V2l0aExvZ3MtZG5hU2ltaWFucy0tRjJNNFY0TlQiLCJNIjoiUHVibGljIn0%3D)**.
+Além das métricas listadas, foi criado um alarme para alerta via e-mail em caso de todas as instâncias do grupo AutoScaling estarem fora do ar.
 
 ## Desenvolvedores
 
