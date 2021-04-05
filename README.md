@@ -1,4 +1,5 @@
 <img src = "https://i.ibb.co/hCfWxPp/guimsmendes-dna-simians-dark.png">
+
 [![Quality gate](https://sonarcloud.io/api/project_badges/quality_gate?project=guimsmendes_dna-simians)](https://sonarcloud.io/dashboard?id=guimsmendes_dna-simians)
 
 [![Coverage](https://sonarcloud.io/api/project_badges/measure?project=guimsmendes_dna-simians&metric=coverage)](https://sonarcloud.io/dashboard?id=guimsmendes_dna-simians)[![Lines of Code](https://sonarcloud.io/api/project_badges/measure?project=guimsmendes_dna-simians&metric=ncloc)](https://sonarcloud.io/dashboard?id=guimsmendes_dna-simians)
