@@ -30,9 +30,9 @@ jobs:
       env:
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
       run: mvn sonar:sonar    \
-          -Dsonar.projectKey=guimsmendes_dna-simians    \
-          -Dsonar.organization=guimsmendes   \
-          -Dsonar.host.url=https://sonarcloud.io    \
+          -Dsonar.projectKey="guimsmendes_dna-simians"    \
+          -Dsonar.organization="guimsmendes"   \
+          -Dsonar.host.url="https://sonarcloud.io"    \
           -Dsonar.login=$SONAR_TOKEN \
           -Dsonar.coverage.jacoco.xmlReportPaths=$(find "$(pwd)" -path '*jacoco.xml' | sed 's/.*/&/' | tr '\n' ',')
 
