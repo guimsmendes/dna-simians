@@ -37,6 +37,7 @@ Realiza a análise do Dna recebido para definir se é um Dna **Humano** ou **Sí
 Caso o DNA seja identificado como um símio, é retornado um **HTTP 200-OK**, caso
 contrário um **HTTP 403-FORBIDDEN**.
 Após a verificação, o registro é incluído no banco de dados da aplicação.
+
 - **GET /stats** - realiza uma busca no banco de dados registrado na aplicação retornando o **número** de Dna's registrados para **humanos**, **símios**, e a **relação** entre os dois conforme Response abaixo:
 > **{"count_mutant_dna": 40, "count_human_dna": 100: "ratio": 0.4}**
 
