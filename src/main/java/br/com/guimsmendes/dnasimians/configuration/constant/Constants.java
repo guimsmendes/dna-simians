@@ -1,4 +1,4 @@
-package br.com.guimsmendes.dnasimians.dataprovider.constant;
+package br.com.guimsmendes.dnasimians.configuration.constant;
 
 public class Constants {
 

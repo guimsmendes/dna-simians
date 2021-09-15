@@ -1,4 +1,4 @@
-package br.com.guimsmendes.dnasimians.dataprovider.sqs.config;
+package br.com.guimsmendes.dnasimians.configuration;
 
 import com.amazonaws.auth.AWSStaticCredentialsProvider;
 import com.amazonaws.auth.BasicAWSCredentials;

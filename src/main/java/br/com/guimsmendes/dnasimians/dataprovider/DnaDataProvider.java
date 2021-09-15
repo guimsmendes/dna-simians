@@ -7,8 +7,8 @@ import br.com.guimsmendes.dnasimians.usecase.domain.DnaDomain;
 import br.com.guimsmendes.dnasimians.usecase.domain.enums.DnaType;
 import br.com.guimsmendes.dnasimians.usecase.gateway.DnaGateway;
 
-import static br.com.guimsmendes.dnasimians.dataprovider.constant.Constants.DNA_TABLE_NAME;
-import static br.com.guimsmendes.dnasimians.dataprovider.constant.Constants.POSTGRES_DATABASE_NAME;
+import static br.com.guimsmendes.dnasimians.configuration.constant.Constants.DNA_TABLE_NAME;
+import static br.com.guimsmendes.dnasimians.configuration.constant.Constants.POSTGRES_DATABASE_NAME;
 
 import java.math.BigInteger;
 
